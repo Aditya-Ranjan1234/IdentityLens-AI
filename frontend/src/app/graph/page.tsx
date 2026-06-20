@@ -26,7 +26,8 @@ export default function GraphPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/graph")
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+    fetch(`${apiUrl}/api/graph`)
       .then((res) => res.json())
       .then((data) => {
         setGraphData(data);

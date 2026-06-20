@@ -16,7 +16,8 @@ export default function Risks() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/risks")
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+    fetch(`${apiUrl}/api/risks`)
       .then((res) => res.json())
       .then((data) => {
         setRisks(data);

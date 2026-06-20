@@ -17,7 +17,8 @@ export default function Incidents() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/incidents")
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+    fetch(`${apiUrl}/api/incidents`)
       .then((res) => res.json())
       .then((data) => {
         setIncidents(data);
