@@ -1,5 +1,9 @@
 # Python
-venv/
+venv
+hf-space
+.env
+*.pyc
+__pycache__/
 __pycache__/
 *.pyc
 
