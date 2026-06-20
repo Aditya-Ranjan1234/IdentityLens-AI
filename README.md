@@ -1,4 +1,15 @@
 
+---
+title: IdentityLens AI
+emoji: shield
+colorFrom: purple
+colorTo: blue
+sdk: docker
+app_port: 7860
+pinned: false
+short_description: Hybrid identity sprawl and privileged access abuse detection dashboard for AD, AWS, Okta, and SaaS environments.
+---
+
 # IdentityLens AI - Hybrid Identity Risk Detector
 
 **IdentityLens AI** is an advanced tool for detecting and analyzing identity sprawl and privilege abuse in hybrid (on-prem and cloud) environments. It consolidates identity data from multiple platforms, calculates effective privileges (including nested group inheritance), and uses machine learning to detect anomalies and risky behaviors.
