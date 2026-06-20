@@ -19,7 +19,9 @@ jobs:
       - name: Copy files to HF Space repo
         run: |
           rm -rf hf-space/* hf-space/.* 2>/dev/null || true
-          cp -r ./* hf-space/ || true
+          shopt -s extglob dotglob
+          cp -r !(hf-space) hf-space/ || true
+          shopt -u extglob dotglob
       - name: Commit and Push to Hugging Face
         run: |
           cd hf-space
