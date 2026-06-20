@@ -54,10 +54,11 @@ export default function IdentityExplorer() {
   useEffect(() => {
     async function loadData() {
       try {
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
         const [usersRes, privilegesRes, anomalyRes] = await Promise.all([
-          fetch("http://localhost:8000/api/users"),
-          fetch(`http://localhost:8000/api/privileges/${userId}`),
-          fetch("http://localhost:8000/api/anomalies?model_type=isolation_forest"),
+          fetch(`${API_URL}/api/users`),
+          fetch(`${API_URL}/api/privileges/${userId}`),
+          fetch(`${API_URL}/api/anomalies?model_type=isolation_forest`),
         ]);
         const users = await usersRes.json();
         const userData = users.find((u: User) => u.user_id === userId);

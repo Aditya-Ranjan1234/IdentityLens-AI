@@ -120,14 +120,15 @@ export default function Home() {
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
 
   useEffect(() => {
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
     Promise.all([
-      fetch("http://localhost:8000/api/users").then((res) => res.json()),
-      fetch("http://localhost:8000/api/risks").then((res) => res.json()),
-      fetch("http://localhost:8000/api/incidents").then((res) => res.json()),
-      fetch("http://localhost:8000/api/anomalies").then((res) => res.json()),
-      fetch("http://localhost:8000/api/metrics").then((res) => res.json()),
-      fetch("http://localhost:8000/api/graph").then((res) => res.json()),
-      fetch("http://localhost:8000/api/offboarding").then((res) => res.json()),
+      fetch(`${API_URL}/api/users`).then((res) => res.json()),
+      fetch(`${API_URL}/api/risks`).then((res) => res.json()),
+      fetch(`${API_URL}/api/incidents`).then((res) => res.json()),
+      fetch(`${API_URL}/api/anomalies`).then((res) => res.json()),
+      fetch(`${API_URL}/api/metrics`).then((res) => res.json()),
+      fetch(`${API_URL}/api/graph`).then((res) => res.json()),
+      fetch(`${API_URL}/api/offboarding`).then((res) => res.json()),
     ])
       .then(([usersRes, risksRes, incidentsRes, anomaliesRes, metricsRes, graphRes, offboardingRes]) => {
         setUsers(usersRes);

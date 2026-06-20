@@ -1,0 +1,32 @@
+
+name: Deploy to Hugging Face Space
+on:
+  push:
+    branches: [ main, master ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+      - name: Set up SSH for Hugging Face
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.HF_SSH_PRIVATE_KEY }}
+      - name: Clone Hugging Face Space
+        run: |
+          git clone --depth 1 https://huggingface.co/spaces/aditya-ranjan1234/identitylens-ai hf-space
+      - name: Copy files to HF Space repo
+        run: |
+          rm -rf hf-space/* hf-space/.* 2>/dev/null || true
+          cp -r ./* hf-space/ || true
+      - name: Commit and Push to Hugging Face
+        run: |
+          cd hf-space
+          git add --all
+          git commit -m "Auto-deploy from GitHub" || echo "No changes to commit"
+          git push https://aditya-ranjan1234:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/aditya-ranjan1234/identitylens-ai
