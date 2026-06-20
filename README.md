@@ -1,13 +1,13 @@
 
 ---
 title: IdentityLens AI
-emoji: shield
+emoji: 🛡️
 colorFrom: purple
 colorTo: blue
 sdk: docker
 app_port: 7860
 pinned: false
-short_description: Hybrid identity sprawl and privileged access abuse detection dashboard for AD, AWS, Okta, and SaaS environments.
+short_description: Hybrid identity risk and privilege abuse detection.
 ---
 
 # IdentityLens AI - Hybrid Identity Risk Detector
