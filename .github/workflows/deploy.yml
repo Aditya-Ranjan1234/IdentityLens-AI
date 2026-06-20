@@ -23,9 +23,13 @@ jobs:
             --exclude '.github/' \
             --exclude 'hf-space/' \
             --exclude 'venv/' \
+            --exclude 'backend/models/' \
             --exclude 'frontend/node_modules/' \
             --exclude 'frontend/.next/' \
+            --exclude 'template/' \
+            --exclude '*.png' \
             ./ hf-space/
+          mkdir -p hf-space/backend/models
       - name: Push snapshot to Hugging Face
         run: |
           cd hf-space
