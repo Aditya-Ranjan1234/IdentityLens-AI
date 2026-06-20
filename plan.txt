@@ -1,0 +1,832 @@
+For a hackathon, I would go all-in on **Identity Sprawl & Privileged Access Abuse Detection** and build it like a mini version of products from [SailPoint](https://www.sailpoint.com?utm_source=chatgpt.com), [Saviynt](https://saviynt.com?utm_source=chatgpt.com), or [Microsoft Entra ID Governance](https://www.microsoft.com/en-us/security/business/microsoft-entra?utm_source=chatgpt.com).
+
+This problem has the best balance of:
+
+* Low competition
+* High judge appeal
+* AI opportunities
+* Graph visualization opportunities
+* Manageable implementation
+
+---
+
+# System Vision
+
+## Product Name
+
+**IdentityLens AI**
+
+### One-line Pitch
+
+> Detect hidden privilege abuse, orphaned accounts, and cross-platform identity risks before attackers exploit them.
+
+---
+
+# Architecture
+
+```text
+Data Simulator
+    ↓
+
+CSV/JSON Files
+
+    ↓
+
+ETL Pipeline
+    ↓
+
+Identity Resolver
+    ↓
+
+Privilege Engine
+    ↓
+
+Risk Engine
+    ↓
+
+Anomaly Detection Model
+    ↓
+
+Incident Correlator
+    ↓
+
+LLM Explanation Engine
+    ↓
+
+Dashboard
+```
+
+---
+
+# Tech Stack
+
+## Backend
+
+```bash
+Python 3.12
+FastAPI
+SQLAlchemy
+SQLite
+Pandas
+```
+
+---
+
+## ML
+
+```bash
+scikit-learn
+networkx
+numpy
+```
+
+---
+
+## Frontend
+
+```bash
+Next.js
+TypeScript
+Tailwind
+shadcn/ui
+React Flow
+Recharts
+```
+
+---
+
+## AI
+
+```bash
+Gemini API
+```
+
+Use only for explanations.
+
+---
+
+# Folder Structure
+
+```text
+identity-lens/
+
+backend/
+│
+├── app/
+│   ├── api/
+│   ├── models/
+│   ├── services/
+│   ├── ml/
+│   ├── graph/
+│   └── risk/
+│
+├── data/
+├── scripts/
+└── database/
+
+frontend/
+```
+
+---
+
+# VENV Creation
+
+```bash
+mkdir identity-lens
+
+cd identity-lens
+
+python -m venv venv
+```
+
+Activate:
+
+```bash
+source venv/bin/activate
+```
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Install:
+
+```bash
+pip install fastapi
+pip install uvicorn
+pip install pandas
+pip install numpy
+pip install scikit-learn
+pip install networkx
+pip install sqlalchemy
+pip install faker
+pip install google-generativeai
+```
+
+Freeze:
+
+```bash
+pip freeze > requirements.txt
+```
+
+---
+
+# Data Simulation
+
+You should NOT use real AWS.
+
+Generate realistic enterprise data.
+
+---
+
+# Dataset 1
+
+## users.csv
+
+### 500 users
+
+```csv
+user_id,name,department,title,status
+U001,John Smith,Engineering,SWE,ACTIVE
+```
+
+Fields:
+
+```text
+user_id
+name
+email
+department
+manager
+employment_type
+hire_date
+termination_date
+status
+```
+
+---
+
+# Dataset 2
+
+## ad_accounts.csv
+
+```csv
+user_id,ad_account,status,last_login
+```
+
+Example:
+
+```csv
+U001,jsmith,ACTIVE,2026-05-02
+```
+
+---
+
+# Dataset 3
+
+## aws_accounts.csv
+
+```csv
+user_id
+aws_user
+roles
+last_login
+```
+
+Example:
+
+```csv
+U001
+john.smith
+ReadOnlyAccess
+2026-06-15
+```
+
+---
+
+# Dataset 4
+
+## okta_accounts.csv
+
+```csv
+user_id
+okta_id
+groups
+mfa_enabled
+```
+
+---
+
+# Dataset 5
+
+## salesforce_accounts.csv
+
+```csv
+user_id
+profile
+permissions
+```
+
+---
+
+# Dataset 6
+
+## audit_logs.csv
+
+10000 rows
+
+```csv
+timestamp
+user_id
+platform
+action
+resource
+ip
+country
+success
+```
+
+Example:
+
+```csv
+2026-06-10T02:10:00Z
+U032
+AWS
+S3_ACCESS
+customer_bucket
+192.168.1.4
+Russia
+TRUE
+```
+
+---
+
+# Dataset 7
+
+## privilege_changes.csv
+
+```csv
+user_id
+old_role
+new_role
+platform
+timestamp
+```
+
+---
+
+# Dataset 8
+
+## offboarding.csv
+
+```csv
+user_id
+termination_date
+ad_disabled
+aws_disabled
+okta_disabled
+```
+
+---
+
+# Hidden Risk Cases
+
+Inject anomalies manually.
+
+---
+
+## Case 1
+
+Offboarding Failure
+
+```text
+AD disabled
+
+AWS active
+Okta active
+```
+
+Severity:
+
+```text
+CRITICAL
+```
+
+---
+
+## Case 2
+
+Cross Platform Admin
+
+```text
+AD Domain Admin
+
+AWS AdministratorAccess
+
+Okta SuperAdmin
+```
+
+Severity:
+
+```text
+CRITICAL
+```
+
+---
+
+## Case 3
+
+Dormant Admin
+
+```text
+Admin
+
+No login 120 days
+```
+
+---
+
+## Case 4
+
+Token Abuse
+
+```text
+API token
+
+Used from 5 countries
+```
+
+---
+
+## Case 5
+
+Privilege Spike
+
+```text
+5 new roles
+
+3 days
+```
+
+---
+
+# Identity Resolution Engine
+
+Problem:
+
+```text
+John Smith
+
+AD:
+jsmith
+
+AWS:
+john.smith
+
+Okta:
+john.smith@corp.com
+```
+
+Need to merge.
+
+Create:
+
+```python
+identity_master
+```
+
+Table:
+
+```text
+master_id
+platform_ids
+department
+```
+
+---
+
+# Privilege Graph
+
+This is your biggest wow factor.
+
+Use:
+
+```python
+networkx
+```
+
+Graph:
+
+```text
+User
+ ↓
+Group
+ ↓
+Role
+ ↓
+Permission
+ ↓
+Resource
+```
+
+Example:
+
+```text
+John
+
+→ AD Domain Admin
+
+→ AWS Administrator
+
+→ S3 Full Access
+
+→ Production Bucket
+```
+
+---
+
+# Effective Privilege Calculation
+
+Don't use assigned role.
+
+Calculate inherited roles.
+
+Example:
+
+```text
+User
+ ↓
+Group A
+ ↓
+Group B
+ ↓
+Admin
+```
+
+User becomes admin.
+
+---
+
+# Risk Engine
+
+Create weighted scoring.
+
+Formula:
+
+```text
+Risk Score
+
+=
+Privilege Breadth
++
+Dormancy
++
+Platform Spread
++
+Behavior Score
++
+Offboarding Score
+```
+
+---
+
+## Example
+
+```text
+Cross Platform Admin = 40
+
+Dormant > 90 Days = 20
+
+Offboarding Gap = 30
+
+Token Abuse = 10
+```
+
+Total:
+
+```text
+100
+```
+
+Critical.
+
+---
+
+# ML Model
+
+Use:
+
+```python
+IsolationForest
+```
+
+Features:
+
+```text
+login_count
+platform_count
+privilege_count
+new_roles
+country_changes
+hour_variance
+```
+
+Train:
+
+```python
+IsolationForest(
+    contamination=0.05
+)
+```
+
+Output:
+
+```text
+Anomaly Score
+```
+
+---
+
+# Incident Correlation
+
+Don't show 50 alerts.
+
+Group them.
+
+Example:
+
+```text
+User:
+John
+
+Dormant Admin
++
+AWS Login
++
+Privilege Escalation
+```
+
+↓
+
+```text
+Incident #1004
+```
+
+---
+
+# AI Layer
+
+Prompt:
+
+```text
+You are an IAM security analyst.
+
+Explain:
+
+1. Why risky
+2. Evidence
+3. MITRE Mapping
+4. Remediation
+```
+
+Output:
+
+```text
+Risk:
+Cross-platform privilege abuse
+
+Evidence:
+User possesses Domain Admin,
+AWS AdministratorAccess,
+and Okta SuperAdmin.
+
+MITRE:
+T1078
+T1098
+
+Remediation:
+Remove AWS AdministratorAccess.
+Review Okta SuperAdmin necessity.
+```
+
+---
+
+# Dashboard Pages
+
+## Executive Dashboard
+
+Cards:
+
+```text
+Total Users
+High Risk Users
+Critical Incidents
+Dormant Admins
+Orphaned Accounts
+```
+
+---
+
+## Identity Explorer
+
+Search:
+
+```text
+John Smith
+```
+
+Shows:
+
+```text
+All Platforms
+Permissions
+Groups
+Risk
+```
+
+---
+
+## Graph View
+
+React Flow
+
+Visual:
+
+```text
+User
+ ↓
+Group
+ ↓
+Role
+ ↓
+Permission
+```
+
+This is demo gold.
+
+---
+
+## Risk Center
+
+Table:
+
+```text
+User
+Risk Score
+Severity
+Reason
+```
+
+---
+
+## Offboarding Gaps
+
+```text
+User
+AD
+AWS
+Okta
+```
+
+Example:
+
+```text
+Disabled
+Active
+Active
+```
+
+Red badge.
+
+---
+
+## Attack Paths
+
+Visualize:
+
+```text
+User
+→ AWS Admin
+→ Production S3
+→ Customer Data
+```
+
+---
+
+# Judging Demo Story
+
+Create 3 scenarios:
+
+### Scenario 1
+
+Contractor left company.
+
+```text
+AD disabled
+
+AWS active
+```
+
+Detected.
+
+---
+
+### Scenario 2
+
+Service account became admin.
+
+Detected by graph.
+
+---
+
+### Scenario 3
+
+Token abuse from multiple countries.
+
+Detected by ML.
+
+---
+
+# Stretch Goals
+
+If time remains:
+
+### RAG
+
+Upload:
+
+```text
+NIST AC-2
+GDPR
+CIS Controls
+```
+
+Ask:
+
+```text
+Why is this risky?
+```
+
+AI answers with compliance references.
+
+---
+
+# Hackathon Winning Formula
+
+**Must Have**
+
+* Identity resolver
+* Privilege graph
+* Risk scoring
+* Offboarding gap detection
+* AI explanations
+
+**Nice To Have**
+
+* Isolation Forest
+* Incident clustering
+* Compliance copilot
+
+If you build those 5 core components well, you'll have a submission that looks like a simplified enterprise IAM governance platform rather than a student project.

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Identity Explorer | Aegis Governance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ffb4ab",
+                    "secondary": "#bdc7d9",
+                    "primary": "#98cbff",
+                    "on-background": "#dfe3ea",
+                    "tertiary-container": "#999caa",
+                    "background": "#0f1419",
+                    "on-primary-fixed": "#001d33",
+                    "on-primary-container": "#00375a",
+                    "tertiary-fixed": "#dfe2f1",
+                    "tertiary-fixed-dim": "#c3c6d4",
+                    "outline-variant": "#3f4852",
+                    "surface-variant": "#30353b",
+                    "on-tertiary-fixed-variant": "#434652",
+                    "secondary-fixed-dim": "#bdc7d9",
+                    "primary-fixed": "#cfe5ff",
+                    "inverse-surface": "#dfe3ea",
+                    "secondary-fixed": "#d9e3f6",
+                    "surface-container-lowest": "#0a0f14",
+                    "on-surface": "#dfe3ea",
+                    "on-tertiary": "#2c303b",
+                    "surface-tint": "#98cbff",
+                    "tertiary": "#c3c6d4",
+                    "surface-bright": "#353a40",
+                    "on-primary": "#003354",
+                    "primary-container": "#00a3ff",
+                    "surface-container-high": "#262a30",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "on-secondary": "#27313f",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#004a77",
+                    "surface-container": "#1b2026",
+                    "primary-fixed-dim": "#98cbff",
+                    "surface-container-low": "#171c22",
+                    "on-secondary-fixed": "#121c2a",
+                    "inverse-primary": "#00629d",
+                    "on-secondary-container": "#afb9cb",
+                    "surface-dim": "#0f1419",
+                    "surface": "#0f1419",
+                    "inverse-on-surface": "#2c3137",
+                    "on-tertiary-fixed": "#171b26",
+                    "on-secondary-fixed-variant": "#3d4756",
+                    "on-surface-variant": "#bec7d4",
+                    "surface-container-highest": "#30353b",
+                    "secondary-container": "#404a59",
+                    "outline": "#88919d",
+                    "on-tertiary-container": "#30343f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "unit": "4px",
+                    "stack-sm": "8px",
+                    "container-padding": "24px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-mono": ["JetBrains Mono"],
+                    "display-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "table-data": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-mono": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "table-data": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #0f1419; color: #dfe3ea; scroll-behavior: smooth; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .marching-ants { background-size: 20px 1px; background-repeat: repeat-x; background-image: linear-gradient(to right, #98cbff 50%, transparent 50%); animation: ants 1s linear infinite; }
+        @keyframes ants { from { background-position: 0 0; } to { background-position: 20px 0; } }
+        .glass-panel { backdrop-filter: blur(8px); background: rgba(31, 41, 55, 0.6); border: 1px solid #2d3748; }
+        .risk-glow { box-shadow: 0 0 15px rgba(248, 113, 113, 0.2); }
+        .pulse-dot { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-container border-r border-outline-variant flex flex-col p-stack-md gap-stack-sm z-50">
+<div class="mb-stack-lg">
+<h1 class="font-headline-md text-headline-md text-primary font-bold">Aegis</h1>
+<p class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest mt-1">Identity Gov</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest hover:text-on-surface transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-mono text-label-mono">Overview</span>
+</a>
+<a class="flex items-center gap-3 bg-secondary-container text-on-secondary-container rounded-lg px-3 py-2 shadow-[0px_0px_8px_rgba(152,203,255,0.3)] transition-transform scale-98" href="#">
+<span class="material-symbols-outlined">person_search</span>
+<span class="font-label-mono text-label-mono">Identity Explorer</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest hover:text-on-surface transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">speed</span>
+<span class="font-label-mono text-label-mono">Risk Scoring</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest hover:text-on-surface transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">door_front</span>
+<span class="font-label-mono text-label-mono">Offboarding Gaps</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest hover:text-on-surface transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<span class="font-label-mono text-label-mono">Audit Reports</span>
+</a>
+</nav>
+<div class="mt-auto pt-stack-md border-t border-outline-variant flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2 mb-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-primary/20">
+<img class="w-full h-full object-cover" data-alt="A portrait of a senior security operations center operator with a focused expression, set in a dimly lit, high-tech environment with multiple digital screens glowing in the background. The style is professional and cyber-technical, with cool blue and slate tones and sharp focus on the person's professional attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwAqg4h6T7SJgh16G-kV5ruc01t8Hx9Jbie9kv4bqPZ6ObxuAb_7Lo2amDBvcXf47LvRurn3bhVUiYh0FoxNkpXalcd5fcJrKtV8QXfBenvocOukXg3y8zBp4_RIywq_-Z5IdNkN8ej6r8jlxGwxffVZA8kH-GsaYdPf7nMFfz6tOd-sKcFsM_2QMknPC0SQ9URwMVvAo65YJhcFtNy2whTcDueTa6tVvk4n1i5W-QynEJqym6eaaOWp3RaWaA4n2oYT9UkceN2U-n"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-[10px] text-on-surface leading-none">SOC Operator</span>
+<span class="font-label-mono text-[8px] text-on-surface-variant">Global Admin</span>
+</div>
+</div>
+<a class="flex items-center gap-3 text-on-surface-variant px-3 py-2 hover:bg-surface-container-highest hover:text-on-surface transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">dns</span>
+<span class="font-label-mono text-label-mono">System Health</span>
+</a>
+<a class="flex items-center gap-3 text-error px-3 py-2 hover:bg-error-container/20 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-mono text-label-mono">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-[240px] flex-1 flex flex-col min-w-0">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-container-padding h-16 sticky top-0 z-40 border-b border-outline-variant bg-background">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_left</span>
+<span class="font-body-md text-body-md">Directory</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface font-bold">Sarah Jenkins</span>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="flex items-center bg-surface-container px-3 py-1.5 rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md font-body-md w-64 p-0" placeholder="Search identities..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="p-2 hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined">settings</span></button>
+<button class="p-2 hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined">help</span></button>
+</div>
+</div>
+</header>
+<!-- Profile Canvas -->
+<div class="p-container-padding grid grid-cols-12 gap-gutter">
+<!-- User Identity Profile -->
+<section class="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
+<div class="bg-surface-container p-stack-md border border-outline-variant rounded-xl">
+<div class="flex items-start justify-between mb-stack-md">
+<div class="flex gap-stack-md">
+<div class="w-20 h-20 rounded-xl bg-surface-container-highest border border-primary/30 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a DevOps Engineer named Sarah Jenkins, looking confident and competent. She is wearing a modern technical fleece. The background is a blurred office environment with soft neon accent lighting consistent with a tech-forward workspace. The lighting is crisp and the overall aesthetic is professional and high-fidelity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClRumxr_bYmhLso_qzhjrgzUobIr6i98zWCz8zz7WoovKpA18AWWUkk-ZoK7YFj13u4z1GGf5Z2hLvvIfhEyZRchYeUqv6CuQW450XzIhTT5lVkOX2ttnI6XHLJtKjUD97Q2PO8DpwrLmOUJFxZQ7kjMBTe7e9UAlh-t04vBchGU6BfLQuinGHL6vErpmJT4AawXtHI1K5nHKs_sFImYZU2hArxtvz77A0KZtM_EEpCRAvkiq2Yf9w_YHy90drvSs2QTvi6kY_Ra6V"/>
+</div>
+<div>
+<h2 class="font-display-sm text-display-sm text-on-surface">Sarah Jenkins</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">DevOps Engineer • Platform Team</p>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2 py-0.5 bg-error-container text-error rounded font-label-mono text-[10px] border border-error/20">
+<span class="material-symbols-outlined text-[14px] fill-1" style="font-variation-settings: 'FILL' 1;">warning</span>
+                                    HIGH RISK (88/100)
+                                </div>
+</div>
+</div>
+</div>
+<div class="space-y-stack-sm mt-4">
+<div class="p-stack-sm bg-surface-container-low rounded-lg border border-outline-variant flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 flex items-center justify-center bg-on-surface-variant/10 rounded">
+<span class="material-symbols-outlined text-on-surface-variant">account_tree</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface">Active Directory</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary">sjenkins</span>
+</div>
+<div class="p-stack-sm bg-surface-container-low rounded-lg border border-outline-variant flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 flex items-center justify-center bg-on-surface-variant/10 rounded">
+<span class="material-symbols-outlined text-on-surface-variant">cloud</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface">AWS Identity</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary">jenkins-prod</span>
+</div>
+<div class="p-stack-sm bg-surface-container-low rounded-lg border border-outline-variant flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 flex items-center justify-center bg-on-surface-variant/10 rounded">
+<span class="material-symbols-outlined text-on-surface-variant">key</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface">Okta SSO</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary">s.jenkins@corp.com</span>
+</div>
+</div>
+</div>
+<!-- Risk Analysis Panel -->
+<div class="bg-surface-container p-stack-md border border-error/30 rounded-xl risk-glow">
+<h3 class="font-label-mono text-label-mono text-error font-bold mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">report</span> RISK ANALYSIS
+                    </h3>
+<ul class="space-y-stack-sm">
+<li class="flex gap-3 text-on-surface-variant">
+<span class="text-error mt-1">•</span>
+<span class="font-body-md text-body-md"><strong class="text-on-surface">Cross-platform admin:</strong> Concurrent elevated roles in AD (Domain Admin) and AWS (Prod-Admin).</span>
+</li>
+<li class="flex gap-3 text-on-surface-variant">
+<span class="text-error mt-1">•</span>
+<span class="font-body-md text-body-md"><strong class="text-on-surface">Inactivity:</strong> No primary workstation login in 45 days. Account remains active.</span>
+</li>
+<li class="flex gap-3 text-on-surface-variant">
+<span class="text-error mt-1">•</span>
+<span class="font-body-md text-body-md"><strong class="text-on-surface">Inherited Privilege:</strong> Inherited 'Global Admin' through un-expiring nested group <code class="bg-surface-container-highest px-1 rounded text-primary">temp-incident-response</code>.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- Effective Privilege Graph -->
+<section class="col-span-12 lg:col-span-8 bg-surface-container border border-outline-variant rounded-xl p-stack-md flex flex-col">
+<div class="flex justify-between items-center mb-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Effective Privilege Graph</h3>
+<div class="flex gap-2">
+<button class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded font-label-mono text-[10px] hover:bg-surface-container-highest transition-colors">Export Map</button>
+<button class="bg-surface-container-highest text-on-surface px-3 py-1 rounded font-label-mono text-[10px] border border-outline-variant">Refresh Sync</button>
+</div>
+</div>
+<div class="flex-1 relative min-h-[400px] flex items-center justify-around">
+<!-- Graph Visualization -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle, #98cbff 1px, transparent 1px); background-size: 32px 32px;"></div>
+<!-- Identity Node -->
+<div class="z-10 flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center relative">
+<span class="material-symbols-outlined text-primary text-[32px]">person</span>
+<div class="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full border-2 border-background pulse-dot"></div>
+</div>
+<span class="font-label-mono text-label-mono text-primary">sjenkins</span>
+</div>
+<!-- Groups Column -->
+<div class="z-10 flex flex-col gap-stack-lg">
+<div class="p-3 bg-surface-container-high border border-outline-variant rounded-lg w-48 relative group hover:border-primary transition-colors cursor-pointer">
+<div class="font-label-mono text-[10px] text-on-surface-variant mb-1">AD Group</div>
+<div class="font-body-md text-body-md text-on-surface truncate">Platform-Ops</div>
+<div class="marching-ants absolute top-1/2 -right-16 w-16 h-[1px]"></div>
+<div class="marching-ants absolute top-1/2 -left-16 w-16 h-[1px]"></div>
+</div>
+<div class="p-3 bg-error-container/20 border border-error/50 rounded-lg w-48 relative group hover:border-error transition-colors cursor-pointer">
+<div class="font-label-mono text-[10px] text-error mb-1">Nested AD Group</div>
+<div class="font-body-md text-body-md text-on-surface truncate">temp-incident-res...</div>
+<div class="marching-ants absolute top-1/2 -right-16 w-16 h-[1px]"></div>
+<div class="absolute top-1/2 -left-16 w-16 h-[1px] bg-error opacity-50"></div>
+</div>
+</div>
+<!-- Permissions Column -->
+<div class="z-10 flex flex-col gap-stack-lg">
+<div class="p-4 bg-surface-container-highest border-2 border-primary/40 rounded-xl w-56 shadow-[0_0_20px_rgba(152,203,255,0.1)]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_done</span>
+<span class="font-label-mono text-label-mono text-on-surface">Azure Tenant</span>
+</div>
+<div class="px-2 py-1 bg-primary/10 rounded border border-primary/30 text-center font-bold text-primary font-body-md">Global Administrator</div>
+</div>
+<div class="p-4 bg-surface-container-highest border-2 border-error/40 rounded-xl w-56 shadow-[0_0_20px_rgba(255,180,171,0.1)]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-error text-[20px]">storage</span>
+<span class="font-label-mono text-label-mono text-on-surface">AWS S3</span>
+</div>
+<div class="px-2 py-1 bg-error/10 rounded border border-error/30 text-center font-bold text-error font-body-md">FullAccess (Admin)</div>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-stack-md border-t border-outline-variant flex justify-center gap-stack-lg">
+<div class="flex items-center gap-2">
+<div class="w-3 h-[1px] bg-primary marching-ants"></div>
+<span class="font-label-mono text-[10px] text-on-surface-variant">Explicit Grant</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-[1px] bg-error"></div>
+<span class="font-label-mono text-[10px] text-on-surface-variant">High-Risk Inheritance</span>
+</div>
+</div>
+</section>
+<!-- Remediation Roadmap -->
+<section class="col-span-12 lg:col-span-5 bg-surface-container border border-outline-variant rounded-xl p-stack-md">
+<div class="flex items-center gap-3 mb-stack-lg">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">shield_with_heart</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Remediation Roadmap</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Recommended actions to reduce risk score</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="group relative flex items-start gap-4 p-4 hover:bg-surface-container-highest rounded-xl border border-transparent hover:border-outline-variant transition-all">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center font-label-mono text-[10px] text-primary">1</div>
+<div class="w-[2px] h-12 bg-outline-variant my-2"></div>
+</div>
+<div class="flex-1">
+<h4 class="font-body-lg text-body-lg text-on-surface font-semibold">Revoke AWS Admin Role</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">User has not used AWS console in 30 days. Recommend downgrading to 'Read-Only'.</p>
+<button class="bg-primary text-on-primary-fixed px-4 py-2 rounded-lg font-label-mono text-label-mono font-bold hover:bg-primary-fixed transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified_user</span> EXECUTE ACTION
+                            </button>
+</div>
+</div>
+<div class="group relative flex items-start gap-4 p-4 hover:bg-surface-container-highest rounded-xl border border-transparent hover:border-outline-variant transition-all">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full border-2 border-outline flex items-center justify-center font-label-mono text-[10px] text-outline">2</div>
+<div class="w-[2px] h-12 bg-outline-variant my-2"></div>
+</div>
+<div class="flex-1">
+<h4 class="font-body-lg text-body-lg text-on-surface font-semibold">Remove from AD 'temp-incident' Group</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">Incident #4029 closed on 2023-11-15. Permission set has expired.</p>
+<button class="border border-primary text-primary px-4 py-2 rounded-lg font-label-mono text-label-mono hover:bg-primary/10 transition-all">DE-PROVISION GROUP</button>
+</div>
+</div>
+<div class="group relative flex items-start gap-4 p-4 hover:bg-surface-container-highest rounded-xl border border-transparent hover:border-outline-variant transition-all">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full border-2 border-outline flex items-center justify-center font-label-mono text-[10px] text-outline">3</div>
+</div>
+<div class="flex-1">
+<h4 class="font-body-lg text-body-lg text-on-surface font-semibold">Disable Okta Account</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">Final safety measure if user is confirmed inactive or compromised.</p>
+<button class="bg-error text-on-error px-4 py-2 rounded-lg font-label-mono text-label-mono font-bold hover:bg-error/90 transition-all">LOCK ACCOUNT</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Access Timeline -->
+<section class="col-span-12 lg:col-span-7 bg-surface-container border border-outline-variant rounded-xl p-stack-md">
+<div class="flex justify-between items-center mb-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Access Timeline</h3>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-mono text-[12px]">
+<span class="material-symbols-outlined text-[16px]">filter_list</span> FILTER: LAST 7 DAYS
+                    </div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full">
+<thead>
+<tr class="text-left border-b border-outline-variant">
+<th class="pb-3 font-label-mono text-label-mono text-on-surface-variant uppercase">Timestamp</th>
+<th class="pb-3 font-label-mono text-label-mono text-on-surface-variant uppercase">Platform</th>
+<th class="pb-3 font-label-mono text-label-mono text-on-surface-variant uppercase">Action</th>
+<th class="pb-3 font-label-mono text-label-mono text-on-surface-variant uppercase">Status</th>
+<th class="pb-3 font-label-mono text-label-mono text-on-surface-variant uppercase text-right">Location</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30">
+<tr class="hover:bg-surface-variant transition-colors group">
+<td class="py-4 font-label-mono text-table-data text-on-surface">2023-12-28 14:22:10</td>
+<td class="py-4">
+<span class="flex items-center gap-2 font-body-md text-body-md">
+<div class="w-5 h-5 bg-orange-600/20 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-orange-400">cloud</span>
+</div>
+                                        AWS
+                                    </span>
+</td>
+<td class="py-4 font-body-md text-body-md text-on-surface">IAM::PutRolePolicy</td>
+<td class="py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-label-mono bg-surface-container-highest text-primary border border-primary/20">SUCCESS</span>
+</td>
+<td class="py-4 font-label-mono text-table-data text-on-surface-variant text-right">192.168.1.104</td>
+</tr>
+<tr class="hover:bg-surface-variant transition-colors group">
+<td class="py-4 font-label-mono text-table-data text-on-surface">2023-12-28 10:05:44</td>
+<td class="py-4">
+<span class="flex items-center gap-2 font-body-md text-body-md">
+<div class="w-5 h-5 bg-blue-600/20 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-blue-400">key</span>
+</div>
+                                        Okta
+                                    </span>
+</td>
+<td class="py-4 font-body-md text-body-md text-on-surface">SSO::UserAuth::MFA_Success</td>
+<td class="py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-label-mono bg-surface-container-highest text-primary border border-primary/20">SUCCESS</span>
+</td>
+<td class="py-4 font-label-mono text-table-data text-on-surface-variant text-right">Seattle, US</td>
+</tr>
+<tr class="hover:bg-surface-variant transition-colors group">
+<td class="py-4 font-label-mono text-table-data text-on-surface">2023-12-27 23:15:12</td>
+<td class="py-4">
+<span class="flex items-center gap-2 font-body-md text-body-md">
+<div class="w-5 h-5 bg-red-600/20 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-red-400">account_tree</span>
+</div>
+                                        AD
+                                    </span>
+</td>
+<td class="py-4 font-body-md text-body-md text-error">DirSync::AccessDenied</td>
+<td class="py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-label-mono bg-error/10 text-error border border-error/20">FAILURE</span>
+</td>
+<td class="py-4 font-label-mono text-table-data text-on-surface-variant text-right">Internal_Proxy_04</td>
+</tr>
+<tr class="hover:bg-surface-variant transition-colors group">
+<td class="py-4 font-label-mono text-table-data text-on-surface">2023-12-26 09:12:00</td>
+<td class="py-4">
+<span class="flex items-center gap-2 font-body-md text-body-md">
+<div class="w-5 h-5 bg-blue-600/20 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-blue-400">key</span>
+</div>
+                                        Okta
+                                    </span>
+</td>
+<td class="py-4 font-body-md text-body-md text-on-surface">Session::Refresh</td>
+<td class="py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-label-mono bg-surface-container-highest text-primary border border-primary/20">SUCCESS</span>
+</td>
+<td class="py-4 font-label-mono text-table-data text-on-surface-variant text-right">Seattle, US</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-4 flex justify-between items-center text-on-surface-variant font-label-mono text-[11px]">
+<span>Showing 4 of 128 entries</span>
+<button class="hover:text-primary underline">View Full Audit Log</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on detail page as per rules, but included for system integrity if needed elsewhere) -->
+<!-- The rules mandate suppression on Detail screens -->
+<script>
+        // Micro-interaction for the graph nodes
+        document.querySelectorAll('.group').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                el.classList.add('scale-105');
+            });
+            el.addEventListener('mouseleave', () => {
+                el.classList.remove('scale-105');
+            });
+        });
+
+        // Simple dashboard tab logic simulation
+        console.log("Aegis Identity Explorer Loaded: Sarah Jenkins Profile");
+    </script>
+</body></html>

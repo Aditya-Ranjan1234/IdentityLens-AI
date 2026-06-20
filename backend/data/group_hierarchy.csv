@@ -1,0 +1,17 @@
+group_name,parent_group,platform
+DevOps,Engineering,Okta
+DevOps,Admins,Okta
+Admins,,Okta
+Engineering,All Users,Okta
+AWS_Admins,Admins,Okta
+AWS_Admins,DevOps,Okta
+Admins,,Okta
+Engineering,All Users,Okta
+Engineering_Leads,Engineering,Okta
+Engineering_Leads,Admins,Okta
+Admins,,Okta
+Engineering,All Users,Okta
+SRE,Engineering,Okta
+SRE,DevOps,Okta
+Admins,,Okta
+Engineering,All Users,Okta

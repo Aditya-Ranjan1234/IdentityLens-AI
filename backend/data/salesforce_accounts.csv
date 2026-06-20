@@ -1,0 +1,501 @@
+user_id,profile,permissions
+U0001,Sales User,Modify All Data
+U0002,Standard User,"View All Data,Export Reports"
+U0003,Sales User,Export Reports
+U0004,Sales User,"View All Data,Modify All Data"
+U0005,Sales User,View All Data
+U0006,Standard User,"Modify All Data,View All Data"
+U0007,Marketing User,"Modify All Data,Delete Records"
+U0008,Standard User,Export Reports
+U0009,Marketing User,Export Reports
+U0010,Standard User,"Export Reports,View All Data"
+U0011,Sales User,Delete Records
+U0012,Sales User,View All Data
+U0013,Sales User,"View All Data,Modify All Data"
+U0014,Sales User,"Modify All Data,Delete Records"
+U0015,Standard User,"View All Data,Delete Records"
+U0016,Marketing User,View All Data
+U0017,Sales User,"Export Reports,Delete Records"
+U0018,Standard User,"Delete Records,View All Data"
+U0019,Standard User,Modify All Data
+U0020,Marketing User,View All Data
+U0021,Sales User,Modify All Data
+U0022,Marketing User,"Delete Records,Export Reports"
+U0023,Sales User,"View All Data,Export Reports"
+U0024,Marketing User,"Export Reports,Modify All Data"
+U0025,Standard User,"Delete Records,Modify All Data"
+U0026,Marketing User,Modify All Data
+U0027,Sales User,View All Data
+U0028,Sales User,Delete Records
+U0029,Standard User,Modify All Data
+U0030,Marketing User,Modify All Data
+U0031,Sales User,Modify All Data
+U0032,Standard User,"Export Reports,Delete Records"
+U0033,System Administrator,"Delete Records,Modify All Data"
+U0034,Sales User,Delete Records
+U0035,System Administrator,View All Data
+U0036,System Administrator,"Export Reports,Delete Records"
+U0037,Marketing User,"Export Reports,Delete Records"
+U0038,Sales User,"Delete Records,Export Reports"
+U0039,System Administrator,"Modify All Data,Export Reports"
+U0040,System Administrator,"Delete Records,Modify All Data"
+U0041,Standard User,Delete Records
+U0042,Marketing User,"Modify All Data,Delete Records"
+U0043,System Administrator,"Modify All Data,View All Data"
+U0044,System Administrator,Modify All Data
+U0045,Standard User,Delete Records
+U0046,System Administrator,"Delete Records,Modify All Data"
+U0047,System Administrator,View All Data
+U0048,Marketing User,"Modify All Data,Export Reports"
+U0049,Sales User,Delete Records
+U0050,Standard User,Export Reports
+U0051,Sales User,Export Reports
+U0052,Marketing User,View All Data
+U0053,Marketing User,"Export Reports,Modify All Data"
+U0054,System Administrator,"Delete Records,Export Reports"
+U0055,Standard User,"View All Data,Export Reports"
+U0056,Standard User,"View All Data,Modify All Data"
+U0057,System Administrator,"Delete Records,View All Data"
+U0058,Marketing User,Modify All Data
+U0059,System Administrator,"Modify All Data,View All Data"
+U0060,Standard User,"View All Data,Delete Records"
+U0061,Sales User,Export Reports
+U0062,Marketing User,Delete Records
+U0063,Sales User,Export Reports
+U0064,Marketing User,"Delete Records,View All Data"
+U0065,Marketing User,"Delete Records,Modify All Data"
+U0066,Sales User,Modify All Data
+U0067,Sales User,"Export Reports,Modify All Data"
+U0068,System Administrator,"Export Reports,View All Data"
+U0069,Standard User,Modify All Data
+U0070,Marketing User,"Delete Records,View All Data"
+U0071,Sales User,View All Data
+U0072,Sales User,"Export Reports,View All Data"
+U0073,Sales User,Modify All Data
+U0074,System Administrator,"Delete Records,Export Reports"
+U0075,Sales User,Delete Records
+U0076,Marketing User,"Export Reports,View All Data"
+U0077,Standard User,Modify All Data
+U0078,Marketing User,"Export Reports,View All Data"
+U0079,Marketing User,"Modify All Data,Export Reports"
+U0080,System Administrator,View All Data
+U0081,Marketing User,"View All Data,Delete Records"
+U0082,Marketing User,"Export Reports,Modify All Data"
+U0083,Sales User,Delete Records
+U0084,Standard User,"Modify All Data,Delete Records"
+U0085,Standard User,Delete Records
+U0086,Sales User,Delete Records
+U0087,System Administrator,Delete Records
+U0088,Marketing User,"Delete Records,View All Data"
+U0089,Marketing User,"View All Data,Delete Records"
+U0090,System Administrator,View All Data
+U0091,System Administrator,"Delete Records,Export Reports"
+U0092,Marketing User,"Delete Records,View All Data"
+U0093,Marketing User,View All Data
+U0094,System Administrator,"Delete Records,Modify All Data"
+U0095,Sales User,"Modify All Data,View All Data"
+U0096,System Administrator,Modify All Data
+U0097,System Administrator,Export Reports
+U0098,Sales User,View All Data
+U0099,System Administrator,Export Reports
+U0100,Marketing User,"Delete Records,View All Data"
+U0101,Sales User,"Modify All Data,Delete Records"
+U0102,Marketing User,View All Data
+U0103,System Administrator,Modify All Data
+U0104,System Administrator,"Modify All Data,View All Data"
+U0105,System Administrator,Export Reports
+U0106,Standard User,View All Data
+U0107,Sales User,"View All Data,Export Reports"
+U0108,Standard User,View All Data
+U0109,Sales User,Delete Records
+U0110,Standard User,Delete Records
+U0111,Standard User,View All Data
+U0112,System Administrator,Modify All Data
+U0113,Marketing User,View All Data
+U0114,System Administrator,"Delete Records,Modify All Data"
+U0115,System Administrator,View All Data
+U0116,Standard User,Modify All Data
+U0117,System Administrator,"Modify All Data,Delete Records"
+U0118,Standard User,Modify All Data
+U0119,Sales User,"Modify All Data,Export Reports"
+U0120,Standard User,Delete Records
+U0121,Sales User,"Modify All Data,Delete Records"
+U0122,System Administrator,"View All Data,Modify All Data"
+U0123,Standard User,"View All Data,Delete Records"
+U0124,System Administrator,"Delete Records,Export Reports"
+U0125,Marketing User,View All Data
+U0126,Marketing User,"View All Data,Modify All Data"
+U0127,Marketing User,"Delete Records,Export Reports"
+U0128,Sales User,Export Reports
+U0129,Marketing User,"Modify All Data,View All Data"
+U0130,Sales User,"Modify All Data,View All Data"
+U0131,Sales User,Export Reports
+U0132,Sales User,View All Data
+U0133,System Administrator,"Export Reports,Delete Records"
+U0134,Standard User,View All Data
+U0135,Marketing User,Delete Records
+U0136,System Administrator,"View All Data,Export Reports"
+U0137,Sales User,"Delete Records,Export Reports"
+U0138,Marketing User,"Delete Records,Modify All Data"
+U0139,Sales User,"Delete Records,View All Data"
+U0140,Sales User,View All Data
+U0141,Marketing User,"Export Reports,View All Data"
+U0142,System Administrator,View All Data
+U0143,Standard User,Export Reports
+U0144,Standard User,Export Reports
+U0145,Marketing User,Delete Records
+U0146,Standard User,Export Reports
+U0147,Sales User,Delete Records
+U0148,Sales User,"Delete Records,Export Reports"
+U0149,Marketing User,View All Data
+U0150,Sales User,Export Reports
+U0151,Sales User,"Export Reports,Modify All Data"
+U0152,Sales User,View All Data
+U0153,System Administrator,"Modify All Data,Export Reports"
+U0154,Sales User,Delete Records
+U0155,Sales User,"View All Data,Delete Records"
+U0156,Sales User,"Export Reports,Delete Records"
+U0157,System Administrator,Export Reports
+U0158,Marketing User,"Export Reports,Delete Records"
+U0159,Marketing User,"Delete Records,View All Data"
+U0160,Standard User,Modify All Data
+U0161,Marketing User,"View All Data,Delete Records"
+U0162,Marketing User,"View All Data,Modify All Data"
+U0163,Marketing User,"Export Reports,Modify All Data"
+U0164,Standard User,Modify All Data
+U0165,System Administrator,"View All Data,Delete Records"
+U0166,Standard User,"View All Data,Modify All Data"
+U0167,System Administrator,Delete Records
+U0168,Standard User,"Export Reports,Delete Records"
+U0169,Sales User,"View All Data,Delete Records"
+U0170,Sales User,Delete Records
+U0171,Sales User,"Delete Records,Export Reports"
+U0172,Standard User,"View All Data,Delete Records"
+U0173,System Administrator,"Export Reports,Delete Records"
+U0174,Marketing User,Delete Records
+U0175,Marketing User,"Modify All Data,Export Reports"
+U0176,Standard User,Delete Records
+U0177,Marketing User,Delete Records
+U0178,Sales User,View All Data
+U0179,Standard User,"Delete Records,View All Data"
+U0180,Sales User,"Modify All Data,Export Reports"
+U0181,Standard User,"Delete Records,Modify All Data"
+U0182,Marketing User,Export Reports
+U0183,Sales User,"Export Reports,Delete Records"
+U0184,System Administrator,Modify All Data
+U0185,Sales User,Export Reports
+U0186,Marketing User,"View All Data,Delete Records"
+U0187,System Administrator,"Export Reports,View All Data"
+U0188,System Administrator,Delete Records
+U0189,Sales User,"Delete Records,View All Data"
+U0190,System Administrator,"Delete Records,Modify All Data"
+U0191,System Administrator,"Modify All Data,Export Reports"
+U0192,System Administrator,Modify All Data
+U0193,System Administrator,Modify All Data
+U0194,Marketing User,"Export Reports,Delete Records"
+U0195,Sales User,"View All Data,Export Reports"
+U0196,System Administrator,"Modify All Data,View All Data"
+U0197,Marketing User,"Modify All Data,Delete Records"
+U0198,Standard User,"View All Data,Export Reports"
+U0199,Standard User,"Delete Records,View All Data"
+U0200,Sales User,"View All Data,Modify All Data"
+U0201,System Administrator,View All Data
+U0202,Standard User,"Export Reports,View All Data"
+U0203,System Administrator,Delete Records
+U0204,Marketing User,"Modify All Data,Export Reports"
+U0205,System Administrator,View All Data
+U0206,System Administrator,Delete Records
+U0207,Sales User,"Delete Records,Export Reports"
+U0208,Standard User,"Delete Records,Export Reports"
+U0209,Standard User,"Export Reports,Modify All Data"
+U0210,System Administrator,"Modify All Data,Export Reports"
+U0211,Sales User,"Delete Records,View All Data"
+U0212,Standard User,Modify All Data
+U0213,Marketing User,"Delete Records,Export Reports"
+U0214,Marketing User,Modify All Data
+U0215,Sales User,"View All Data,Modify All Data"
+U0216,Marketing User,"View All Data,Export Reports"
+U0217,Marketing User,Modify All Data
+U0218,Sales User,"Export Reports,View All Data"
+U0219,Marketing User,Export Reports
+U0220,Sales User,"Delete Records,Export Reports"
+U0221,Sales User,Modify All Data
+U0222,Marketing User,Delete Records
+U0223,Sales User,"Export Reports,Delete Records"
+U0224,Standard User,Modify All Data
+U0225,Sales User,View All Data
+U0226,Sales User,Delete Records
+U0227,Marketing User,View All Data
+U0228,System Administrator,Modify All Data
+U0229,Sales User,"Export Reports,Modify All Data"
+U0230,System Administrator,"Modify All Data,Delete Records"
+U0231,Marketing User,"Modify All Data,View All Data"
+U0232,Sales User,"Modify All Data,Export Reports"
+U0233,Sales User,View All Data
+U0234,Standard User,View All Data
+U0235,Sales User,Delete Records
+U0236,System Administrator,Export Reports
+U0237,Sales User,"Modify All Data,View All Data"
+U0238,Marketing User,View All Data
+U0239,Standard User,"Export Reports,Delete Records"
+U0240,Sales User,Modify All Data
+U0241,System Administrator,Delete Records
+U0242,Marketing User,"Export Reports,View All Data"
+U0243,Sales User,Modify All Data
+U0244,Marketing User,Export Reports
+U0245,System Administrator,"Modify All Data,View All Data"
+U0246,Marketing User,"Modify All Data,Delete Records"
+U0247,Sales User,Delete Records
+U0248,Sales User,View All Data
+U0249,Sales User,Delete Records
+U0250,Sales User,Export Reports
+U0251,Sales User,"View All Data,Export Reports"
+U0252,Standard User,Delete Records
+U0253,System Administrator,"Delete Records,Export Reports"
+U0254,Standard User,Delete Records
+U0255,Sales User,"Export Reports,Delete Records"
+U0256,Marketing User,View All Data
+U0257,System Administrator,"Modify All Data,Delete Records"
+U0258,Sales User,"Export Reports,View All Data"
+U0259,Standard User,"Export Reports,View All Data"
+U0260,Marketing User,Delete Records
+U0261,Standard User,Export Reports
+U0262,Marketing User,"Export Reports,Modify All Data"
+U0263,Marketing User,"Delete Records,Modify All Data"
+U0264,System Administrator,"Export Reports,View All Data"
+U0265,Sales User,Modify All Data
+U0266,System Administrator,Modify All Data
+U0267,System Administrator,Export Reports
+U0268,Marketing User,Export Reports
+U0269,Sales User,Export Reports
+U0270,Standard User,"Delete Records,Export Reports"
+U0271,Sales User,"Export Reports,View All Data"
+U0272,System Administrator,Delete Records
+U0273,Standard User,Delete Records
+U0274,System Administrator,Delete Records
+U0275,System Administrator,Modify All Data
+U0276,Sales User,Modify All Data
+U0277,Sales User,Delete Records
+U0278,Standard User,"View All Data,Modify All Data"
+U0279,Marketing User,Delete Records
+U0280,System Administrator,View All Data
+U0281,Sales User,"Export Reports,Delete Records"
+U0282,Marketing User,Delete Records
+U0283,Standard User,"Delete Records,Export Reports"
+U0284,System Administrator,View All Data
+U0285,Marketing User,"View All Data,Delete Records"
+U0286,Standard User,"View All Data,Modify All Data"
+U0287,Marketing User,Modify All Data
+U0288,Sales User,View All Data
+U0289,System Administrator,Export Reports
+U0290,Sales User,"Modify All Data,View All Data"
+U0291,Marketing User,"Export Reports,Delete Records"
+U0292,Marketing User,Delete Records
+U0293,Standard User,"Modify All Data,Export Reports"
+U0294,Sales User,"Export Reports,Modify All Data"
+U0295,Sales User,Export Reports
+U0296,Marketing User,Export Reports
+U0297,Sales User,View All Data
+U0298,Marketing User,"Modify All Data,Delete Records"
+U0299,System Administrator,"View All Data,Modify All Data"
+U0300,Sales User,"View All Data,Modify All Data"
+U0301,Marketing User,Modify All Data
+U0302,Marketing User,Export Reports
+U0303,Marketing User,View All Data
+U0304,Standard User,Export Reports
+U0305,Sales User,Export Reports
+U0306,Marketing User,"Delete Records,Export Reports"
+U0307,Standard User,View All Data
+U0308,Sales User,Modify All Data
+U0309,Sales User,View All Data
+U0310,Sales User,"Delete Records,Export Reports"
+U0311,Sales User,"Delete Records,Modify All Data"
+U0312,System Administrator,Modify All Data
+U0313,Standard User,"View All Data,Modify All Data"
+U0314,Standard User,Export Reports
+U0315,Standard User,Modify All Data
+U0316,Sales User,"Export Reports,Delete Records"
+U0317,Sales User,"Delete Records,Export Reports"
+U0318,Sales User,"View All Data,Export Reports"
+U0319,System Administrator,Modify All Data
+U0320,Standard User,Modify All Data
+U0321,Standard User,Export Reports
+U0322,System Administrator,Export Reports
+U0323,System Administrator,Delete Records
+U0324,Sales User,Export Reports
+U0325,Sales User,View All Data
+U0326,System Administrator,Export Reports
+U0327,Sales User,"View All Data,Modify All Data"
+U0328,System Administrator,Delete Records
+U0329,Sales User,Delete Records
+U0330,Standard User,Export Reports
+U0331,Sales User,"Delete Records,View All Data"
+U0332,Sales User,"Export Reports,Delete Records"
+U0333,Sales User,View All Data
+U0334,Standard User,"Delete Records,Export Reports"
+U0335,Standard User,"Export Reports,Modify All Data"
+U0336,Standard User,"Delete Records,Modify All Data"
+U0337,Sales User,Modify All Data
+U0338,Marketing User,Export Reports
+U0339,Marketing User,"Modify All Data,Delete Records"
+U0340,System Administrator,"Export Reports,View All Data"
+U0341,Marketing User,"Export Reports,Delete Records"
+U0342,Marketing User,"Modify All Data,Delete Records"
+U0343,System Administrator,"View All Data,Delete Records"
+U0344,Sales User,Modify All Data
+U0345,System Administrator,Export Reports
+U0346,Standard User,"Export Reports,Modify All Data"
+U0347,System Administrator,View All Data
+U0348,Standard User,"Delete Records,Modify All Data"
+U0349,System Administrator,View All Data
+U0350,Standard User,"Export Reports,View All Data"
+U0351,System Administrator,Modify All Data
+U0352,Sales User,"Delete Records,Modify All Data"
+U0353,Standard User,"Modify All Data,Delete Records"
+U0354,Standard User,Export Reports
+U0355,Sales User,View All Data
+U0356,Standard User,View All Data
+U0357,System Administrator,Modify All Data
+U0358,Marketing User,Delete Records
+U0359,Sales User,"View All Data,Export Reports"
+U0360,Marketing User,"Modify All Data,View All Data"
+U0361,System Administrator,"Export Reports,View All Data"
+U0362,System Administrator,"Delete Records,Modify All Data"
+U0363,System Administrator,Delete Records
+U0364,Marketing User,"Delete Records,Export Reports"
+U0365,System Administrator,Export Reports
+U0366,System Administrator,Export Reports
+U0367,Sales User,"Export Reports,Delete Records"
+U0368,Marketing User,Export Reports
+U0369,System Administrator,View All Data
+U0370,Standard User,"Delete Records,Modify All Data"
+U0371,System Administrator,"View All Data,Modify All Data"
+U0372,Standard User,View All Data
+U0373,Marketing User,"Export Reports,Delete Records"
+U0374,Marketing User,"Delete Records,View All Data"
+U0375,Marketing User,Export Reports
+U0376,Sales User,Export Reports
+U0377,Marketing User,"Modify All Data,Export Reports"
+U0378,Standard User,Delete Records
+U0379,Sales User,Delete Records
+U0380,System Administrator,Delete Records
+U0381,Marketing User,View All Data
+U0382,Standard User,"Modify All Data,Export Reports"
+U0383,Sales User,View All Data
+U0384,Marketing User,"Delete Records,View All Data"
+U0385,Standard User,Export Reports
+U0386,Marketing User,Export Reports
+U0387,Marketing User,Modify All Data
+U0388,Marketing User,"Delete Records,Export Reports"
+U0389,System Administrator,"Modify All Data,View All Data"
+U0390,Marketing User,Delete Records
+U0391,Sales User,Modify All Data
+U0392,Sales User,"View All Data,Export Reports"
+U0393,Standard User,"Modify All Data,Export Reports"
+U0394,System Administrator,"View All Data,Modify All Data"
+U0395,Sales User,"Delete Records,Export Reports"
+U0396,Sales User,"Export Reports,Delete Records"
+U0397,Sales User,"Modify All Data,View All Data"
+U0398,System Administrator,"Export Reports,View All Data"
+U0399,Standard User,Export Reports
+U0400,Sales User,Modify All Data
+U0401,Marketing User,Export Reports
+U0402,Standard User,Delete Records
+U0403,Marketing User,Modify All Data
+U0404,Standard User,"Delete Records,Modify All Data"
+U0405,Marketing User,"Export Reports,View All Data"
+U0406,System Administrator,Export Reports
+U0407,Standard User,"Delete Records,View All Data"
+U0408,System Administrator,"View All Data,Export Reports"
+U0409,Marketing User,View All Data
+U0410,Sales User,"Delete Records,Export Reports"
+U0411,Sales User,"Export Reports,Modify All Data"
+U0412,System Administrator,Export Reports
+U0413,Sales User,"Modify All Data,Delete Records"
+U0414,Marketing User,Export Reports
+U0415,Sales User,Export Reports
+U0416,Marketing User,Export Reports
+U0417,Marketing User,Modify All Data
+U0418,Standard User,"View All Data,Delete Records"
+U0419,Standard User,View All Data
+U0420,System Administrator,"View All Data,Export Reports"
+U0421,System Administrator,Delete Records
+U0422,System Administrator,Export Reports
+U0423,Standard User,"Export Reports,Delete Records"
+U0424,Standard User,"View All Data,Modify All Data"
+U0425,Sales User,Export Reports
+U0426,Standard User,"Export Reports,Modify All Data"
+U0427,Standard User,View All Data
+U0428,System Administrator,"Modify All Data,View All Data"
+U0429,Marketing User,Modify All Data
+U0430,Marketing User,"Modify All Data,View All Data"
+U0431,Marketing User,View All Data
+U0432,Standard User,"Export Reports,View All Data"
+U0433,Marketing User,Export Reports
+U0434,Marketing User,"Export Reports,View All Data"
+U0435,Standard User,Modify All Data
+U0436,System Administrator,"Export Reports,View All Data"
+U0437,Marketing User,Delete Records
+U0438,Sales User,"View All Data,Modify All Data"
+U0439,Standard User,"Modify All Data,View All Data"
+U0440,Marketing User,Modify All Data
+U0441,System Administrator,"Export Reports,Modify All Data"
+U0442,Standard User,Modify All Data
+U0443,Marketing User,Modify All Data
+U0444,Sales User,"View All Data,Export Reports"
+U0445,Sales User,"Modify All Data,View All Data"
+U0446,Standard User,"Delete Records,Export Reports"
+U0447,Marketing User,"Delete Records,Export Reports"
+U0448,System Administrator,"View All Data,Export Reports"
+U0449,Standard User,"View All Data,Modify All Data"
+U0450,Standard User,Delete Records
+U0451,Sales User,Delete Records
+U0452,Marketing User,"Export Reports,Modify All Data"
+U0453,System Administrator,"Delete Records,View All Data"
+U0454,Sales User,"View All Data,Delete Records"
+U0455,System Administrator,Export Reports
+U0456,Standard User,Modify All Data
+U0457,Sales User,"Export Reports,Delete Records"
+U0458,Standard User,View All Data
+U0459,Sales User,Delete Records
+U0460,Sales User,"Export Reports,View All Data"
+U0461,Standard User,Export Reports
+U0462,Marketing User,Export Reports
+U0463,Standard User,View All Data
+U0464,Marketing User,"Modify All Data,View All Data"
+U0465,Marketing User,Modify All Data
+U0466,Sales User,"View All Data,Modify All Data"
+U0467,Sales User,View All Data
+U0468,System Administrator,"View All Data,Modify All Data"
+U0469,Sales User,Modify All Data
+U0470,System Administrator,Modify All Data
+U0471,Standard User,Delete Records
+U0472,System Administrator,"Modify All Data,Delete Records"
+U0473,Standard User,"Export Reports,View All Data"
+U0474,Sales User,Delete Records
+U0475,Sales User,"Delete Records,View All Data"
+U0476,Sales User,"Delete Records,Export Reports"
+U0477,Standard User,View All Data
+U0478,Marketing User,"Export Reports,Modify All Data"
+U0479,Standard User,"Modify All Data,Export Reports"
+U0480,Standard User,Modify All Data
+U0481,Sales User,Modify All Data
+U0482,System Administrator,Delete Records
+U0483,Marketing User,View All Data
+U0484,Standard User,"Export Reports,View All Data"
+U0485,Marketing User,"Modify All Data,View All Data"
+U0486,Sales User,Delete Records
+U0487,Standard User,"Modify All Data,View All Data"
+U0488,Sales User,Export Reports
+U0489,Standard User,View All Data
+U0490,Standard User,"Delete Records,Export Reports"
+U0491,Standard User,View All Data
+U0492,Sales User,Delete Records
+U0493,Sales User,View All Data
+U0494,Standard User,Delete Records
+U0495,Sales User,"View All Data,Delete Records"
+U0496,Sales User,View All Data
+U0497,Sales User,"Export Reports,Modify All Data"
+U0498,Standard User,"View All Data,Modify All Data"
+U0499,Marketing User,View All Data
+U0500,Standard User,View All Data

@@ -1,0 +1,501 @@
+user_id,name,email,department,title,manager,employment_type,hire_date,termination_date,status
+U0001,Allison Hill,donaldgarcia@example.net,Operations,Senior SWE,CEO,Full-Time,2025-11-07,,ACTIVE
+U0002,Angie Henderson,davisjesse@example.net,Marketing,Senior SWE,CEO,Intern,2026-03-26,2026-05-19,INACTIVE
+U0003,Cristian Santos,lrobinson@example.com,Engineering,SWE,CEO,Full-Time,2025-10-09,,ACTIVE
+U0004,Abigail Shaffer,jpeterson@example.org,Finance,SWE,CEO,Intern,2025-09-29,,ACTIVE
+U0005,Gabrielle Davis,howardmaurice@example.com,Operations,Analyst,CEO,Full-Time,2026-02-04,,ACTIVE
+U0006,Monica Herrera,smiller@example.net,IT,SWE,CEO,Full-Time,2026-06-12,,ACTIVE
+U0007,Shannon Ray,williamsjeremy@example.com,Sales,Staff SWE,CEO,Full-Time,2025-12-09,2026-03-16,INACTIVE
+U0008,Dr. Sharon James,xreid@example.org,Engineering,VP,CEO,Contractor,2026-04-25,,ACTIVE
+U0009,Daniel Adams,lynchgeorge@example.net,Engineering,Designer,CEO,Intern,2025-08-22,,ACTIVE
+U0010,Joel Nelson,gabriellecameron@example.org,HR,Senior SWE,CEO,Intern,2025-11-17,,ACTIVE
+U0011,Andrew Stewart,carl95@example.org,Finance,VP,CEO,Intern,2025-09-26,,ACTIVE
+U0012,Jennifer Rocha,ithomas@example.org,Engineering,Manager,Gabrielle Davis,Full-Time,2025-10-17,,ACTIVE
+U0013,Kimberly Burgess,zhurst@example.com,HR,Director,Dr. Sharon James,Intern,2025-12-23,,ACTIVE
+U0014,Zachary Hicks,camposmichelle@example.org,Sales,Manager,Andrew Stewart,Contractor,2026-06-14,,ACTIVE
+U0015,Rebecca Henderson,cruzcaitlin@example.com,Operations,Senior SWE,Joel Nelson,Intern,2025-09-15,,ACTIVE
+U0016,Tricia Valencia,frazierdanny@example.net,Marketing,Staff SWE,Dr. Sharon James,Contractor,2025-11-05,,ACTIVE
+U0017,Patricia Peterson,ryan70@example.net,Operations,Manager,Andrew Stewart,Full-Time,2025-10-15,,ACTIVE
+U0018,Deborah Mason,williamrodriguez@example.net,IT,VP,Kimberly Burgess,Contractor,2025-07-23,,ACTIVE
+U0019,Mark Lynch,nathanielmartin@example.net,Finance,VP,Shannon Ray,Intern,2026-03-02,,ACTIVE
+U0020,Linda Burns,hickmannatasha@example.com,Operations,Designer,Gabrielle Davis,Contractor,2025-08-30,,ACTIVE
+U0021,David Bradley,millertodd@example.org,Finance,Director,Mark Lynch,Contractor,2026-04-14,,ACTIVE
+U0022,Kim Martinez,karroyo@example.com,Marketing,Staff SWE,Patricia Peterson,Contractor,2025-08-05,,ACTIVE
+U0023,Lisa Brandt,jenniferross@example.net,IT,Senior SWE,Gabrielle Davis,Intern,2025-09-09,,ACTIVE
+U0024,Jessica Holmes,wrightcaleb@example.org,HR,Senior SWE,Kimberly Burgess,Contractor,2026-04-21,,ACTIVE
+U0025,Crystal Robinson,zimmermanbrian@example.org,Finance,Director,Deborah Mason,Full-Time,2026-06-03,,ACTIVE
+U0026,Shannon Jones,joshuawashington@example.net,Operations,Director,Crystal Robinson,Intern,2025-12-11,2026-04-01,INACTIVE
+U0027,Timothy Duncan,esanchez@example.com,Marketing,Designer,Allison Hill,Intern,2025-11-01,,ACTIVE
+U0028,Brent Jordan,ujenkins@example.org,IT,Staff SWE,Patricia Peterson,Full-Time,2026-05-06,,ACTIVE
+U0029,Victoria Garcia,zchandler@example.org,Operations,Manager,Gabrielle Davis,Contractor,2025-09-10,,ACTIVE
+U0030,Connor West,dwhite@example.org,IT,SWE,Linda Burns,Contractor,2026-02-25,2026-04-12,INACTIVE
+U0031,Angela Morton,williamsyvette@example.org,IT,Director,Dr. Sharon James,Full-Time,2025-10-21,,ACTIVE
+U0032,Tammy Allison,richardolson@example.com,Engineering,Senior SWE,Jessica Holmes,Contractor,2025-07-25,,ACTIVE
+U0033,Carmen Smith,ybaker@example.com,Finance,Staff SWE,Daniel Adams,Intern,2026-02-18,,ACTIVE
+U0034,Michael Cross,smoore@example.org,Marketing,Director,Brent Jordan,Full-Time,2026-03-23,,ACTIVE
+U0035,Lauren Daniels,brian97@example.net,Operations,Manager,Linda Burns,Contractor,2026-05-29,,ACTIVE
+U0036,Kim Brown,yorkcasey@example.org,HR,Designer,Dr. Sharon James,Full-Time,2025-10-13,2025-10-18,INACTIVE
+U0037,Cynthia Wilson,bethwilliams@example.org,Finance,Manager,Rebecca Henderson,Full-Time,2025-07-26,,ACTIVE
+U0038,Kevin Mills,james53@example.com,Engineering,Manager,Gabrielle Davis,Full-Time,2025-12-06,2026-02-04,INACTIVE
+U0039,Michael Evans,sarah10@example.com,Sales,Designer,Zachary Hicks,Intern,2025-08-26,,ACTIVE
+U0040,Kristine Garcia,williamanderson@example.com,Finance,Designer,Tricia Valencia,Contractor,2026-01-14,,ACTIVE
+U0041,Sherry Wood,samueldaniels@example.com,Engineering,Analyst,Lisa Brandt,Contractor,2026-01-16,,ACTIVE
+U0042,Victoria Valdez,contrerasangela@example.net,Operations,SWE,Shannon Ray,Full-Time,2026-01-12,,ACTIVE
+U0043,Shawn Baker,newtoneric@example.com,IT,Senior SWE,Tricia Valencia,Full-Time,2025-09-25,,ACTIVE
+U0044,Michelle Harris,william40@example.org,Marketing,Analyst,Jennifer Rocha,Contractor,2026-02-11,,ACTIVE
+U0045,Sandra Williams,kellie42@example.net,Engineering,Designer,Kim Brown,Full-Time,2025-07-15,,ACTIVE
+U0046,Michael Hoffman,jonesnicole@example.org,Finance,SWE,Monica Herrera,Full-Time,2025-09-13,,ACTIVE
+U0047,Sandra Aguilar,russellwilliams@example.com,HR,Manager,Shannon Jones,Full-Time,2025-09-12,,ACTIVE
+U0048,Rebecca Valencia,jason31@example.com,HR,Director,Connor West,Contractor,2026-01-22,,ACTIVE
+U0049,Stacey Russell,sarayoung@example.org,Operations,Designer,Joel Nelson,Full-Time,2025-11-18,,ACTIVE
+U0050,Rita Keith,whitesandra@example.com,Engineering,SWE,Rebecca Valencia,Contractor,2025-07-19,2026-03-20,INACTIVE
+U0051,Sharon Cochran,erik16@example.org,Finance,Staff SWE,Abigail Shaffer,Intern,2025-07-31,,ACTIVE
+U0052,Courtney Velasquez,ybailey@example.org,Engineering,Senior SWE,Michelle Harris,Full-Time,2026-01-12,2026-06-06,INACTIVE
+U0053,Matthew Ross,michelle45@example.net,Marketing,SWE,Kristine Garcia,Full-Time,2026-01-20,,ACTIVE
+U0054,Meghan Anthony,sheila14@example.org,Finance,VP,Patricia Peterson,Full-Time,2026-05-28,,ACTIVE
+U0055,Victoria Johnson,yreed@example.com,Marketing,Director,Shannon Jones,Full-Time,2026-05-29,,ACTIVE
+U0056,William Wilson,jonathanfletcher@example.org,HR,VP,Stacey Russell,Full-Time,2025-06-24,,ACTIVE
+U0057,Renee Mcdaniel,michaeljones@example.net,Finance,Senior SWE,Gabrielle Davis,Intern,2025-10-07,,ACTIVE
+U0058,Lisa Alvarado,cortezkevin@example.com,Marketing,VP,Renee Mcdaniel,Full-Time,2025-10-23,,ACTIVE
+U0059,Erika Terry,jamesortega@example.com,Marketing,Designer,Meghan Anthony,Intern,2026-06-15,,ACTIVE
+U0060,Stephanie Gilbert,richard04@example.com,IT,SWE,Shawn Baker,Intern,2025-11-20,,ACTIVE
+U0061,Richard Lawson,steven73@example.net,Engineering,Staff SWE,Patricia Peterson,Full-Time,2025-08-13,,ACTIVE
+U0062,Steven Flynn,donnacampbell@example.net,Marketing,Director,Mark Lynch,Intern,2025-10-05,,ACTIVE
+U0063,Frances Cardenas,emilywalker@example.org,Marketing,Director,Carmen Smith,Contractor,2025-10-26,,ACTIVE
+U0064,Angel Riggs,gibsonolivia@example.net,IT,SWE,Monica Herrera,Intern,2026-01-22,,ACTIVE
+U0065,Michael Snyder,dylanwatts@example.org,Engineering,SWE,Shawn Baker,Full-Time,2026-05-12,,ACTIVE
+U0066,Colleen Brock,pwilliams@example.org,Marketing,Designer,Victoria Johnson,Intern,2025-06-24,2026-06-12,INACTIVE
+U0067,Robert Contreras,stephanie79@example.net,Marketing,SWE,Rebecca Valencia,Intern,2026-03-29,2026-04-14,INACTIVE
+U0068,Jessica Meadows,vmerritt@example.com,Engineering,Director,Sandra Aguilar,Full-Time,2025-12-20,,ACTIVE
+U0069,Paul Larsen,katie87@example.net,Marketing,Senior SWE,Michael Hoffman,Intern,2026-01-14,,ACTIVE
+U0070,Jeremiah Reeves,josephflores@example.net,Operations,Staff SWE,Angela Morton,Full-Time,2025-09-18,,ACTIVE
+U0071,Chris Reyes,jasminebrown@example.com,Engineering,Staff SWE,Shawn Baker,Contractor,2026-05-28,,ACTIVE
+U0072,John Brown,xprice@example.net,IT,Manager,Lauren Daniels,Full-Time,2026-06-14,2026-06-14,INACTIVE
+U0073,Alicia Gilmore,wwoods@example.com,IT,Designer,Victoria Garcia,Full-Time,2026-02-10,,ACTIVE
+U0074,Sarah Ashley,vmedina@example.net,IT,Manager,Victoria Garcia,Full-Time,2026-05-23,,ACTIVE
+U0075,Stephanie Freeman,ryan06@example.com,Sales,Director,Daniel Adams,Contractor,2025-12-16,,ACTIVE
+U0076,Rebecca Ramsey,ncalhoun@example.net,HR,VP,Abigail Shaffer,Full-Time,2025-10-31,,ACTIVE
+U0077,James Elliott,millerroy@example.com,Sales,SWE,Zachary Hicks,Intern,2026-01-28,,ACTIVE
+U0078,David Murphy,wmurphy@example.com,IT,VP,William Wilson,Intern,2026-03-08,2026-05-20,INACTIVE
+U0079,Trevor Fisher,ruizkaitlyn@example.org,Marketing,Director,Monica Herrera,Intern,2026-01-29,2026-06-15,INACTIVE
+U0080,Mrs. Marie Harrington DDS,herringjames@example.org,Operations,Manager,Sandra Aguilar,Contractor,2025-07-25,,ACTIVE
+U0081,Cynthia Wells,elliottjeffery@example.net,Sales,VP,Tricia Valencia,Intern,2025-11-20,,ACTIVE
+U0082,Jacob Obrien,stricklandfrank@example.com,Operations,Analyst,Victoria Valdez,Contractor,2026-06-11,,ACTIVE
+U0083,Alexander Collins,tsanders@example.org,Marketing,Manager,Meghan Anthony,Intern,2025-12-31,,ACTIVE
+U0084,Michael Burton,terrykevin@example.net,Marketing,Director,Courtney Velasquez,Intern,2025-06-20,,ACTIVE
+U0085,Barbara Riggs,reedross@example.com,Marketing,Analyst,Stephanie Freeman,Intern,2026-05-21,,ACTIVE
+U0086,Matthew Smith,gshort@example.com,HR,Designer,Brent Jordan,Intern,2026-02-17,,ACTIVE
+U0087,Madison Poole,ryangross@example.net,IT,Staff SWE,Barbara Riggs,Full-Time,2025-11-12,,ACTIVE
+U0088,Robert Medina,umarshall@example.net,Operations,VP,Jennifer Rocha,Full-Time,2026-05-30,,ACTIVE
+U0089,Samuel Rivas,ramirezshannon@example.com,IT,Manager,Mark Lynch,Full-Time,2025-07-13,,ACTIVE
+U0090,Mary Rogers,lrosales@example.com,HR,Senior SWE,Erika Terry,Contractor,2026-05-08,,ACTIVE
+U0091,Robert Peterson,angela83@example.org,Operations,Analyst,Angel Riggs,Contractor,2025-10-22,2026-04-16,INACTIVE
+U0092,Jason Peters,hannahbrewer@example.com,Engineering,Senior SWE,Victoria Johnson,Full-Time,2025-09-18,,ACTIVE
+U0093,Alan Phillips,tholt@example.net,Operations,Designer,Shannon Ray,Intern,2025-10-25,,ACTIVE
+U0094,Kara Schmidt,jbarajas@example.com,Engineering,Designer,Deborah Mason,Contractor,2026-05-27,,ACTIVE
+U0095,Jesse Parker,davidlee@example.org,Finance,VP,Renee Mcdaniel,Intern,2026-03-05,,ACTIVE
+U0096,Tiffany Vaughn,javierwashington@example.net,Finance,Designer,David Bradley,Intern,2026-02-18,,ACTIVE
+U0097,Paige Carlson,wallkenneth@example.com,IT,Manager,Jacob Obrien,Contractor,2026-03-13,,ACTIVE
+U0098,Adrian Ferguson,brandon08@example.com,Marketing,Director,Renee Mcdaniel,Full-Time,2025-11-13,,ACTIVE
+U0099,Beth Oneill,agarcia@example.net,Sales,VP,Jeremiah Reeves,Full-Time,2025-08-29,,ACTIVE
+U0100,John Peterson,kingmichelle@example.org,HR,Staff SWE,Robert Peterson,Full-Time,2025-07-22,,ACTIVE
+U0101,Jennifer Jones,hernandezlisa@example.com,Sales,Designer,Meghan Anthony,Full-Time,2025-10-03,,ACTIVE
+U0102,David Grant,yobrien@example.net,HR,SWE,Adrian Ferguson,Intern,2025-12-31,,ACTIVE
+U0103,Joseph Hayes,levans@example.com,Sales,Director,Paige Carlson,Contractor,2026-01-20,,ACTIVE
+U0104,Marc Lynch,mezajared@example.org,Operations,Manager,Frances Cardenas,Full-Time,2025-11-06,,ACTIVE
+U0105,Brad Allen,moorericky@example.net,Engineering,Analyst,Michelle Harris,Intern,2026-06-02,,ACTIVE
+U0106,Doris Hall,jacqueline71@example.net,Operations,Staff SWE,Stephanie Gilbert,Full-Time,2026-05-04,,ACTIVE
+U0107,Dennis Moody,ronaldstephens@example.net,HR,SWE,Andrew Stewart,Intern,2026-01-25,2026-05-23,INACTIVE
+U0108,Derek Thomas,martinkyle@example.net,Marketing,SWE,Michael Cross,Contractor,2025-12-04,,ACTIVE
+U0109,Tammy Gonzales,sbarker@example.com,Sales,VP,Adrian Ferguson,Contractor,2025-11-09,,ACTIVE
+U0110,Kathryn Snyder,georgepamela@example.net,IT,Analyst,Carmen Smith,Full-Time,2026-02-15,2026-04-25,INACTIVE
+U0111,David Davis,keyemily@example.com,Engineering,VP,Victoria Garcia,Intern,2025-07-25,,ACTIVE
+U0112,Pamela Thompson,lmoon@example.net,Operations,SWE,Paige Carlson,Full-Time,2025-10-24,,ACTIVE
+U0113,Robert Costa,vbailey@example.com,Engineering,Staff SWE,Angela Morton,Full-Time,2026-02-17,,ACTIVE
+U0114,Shannon Rivera,zroberts@example.net,Finance,Manager,Stephanie Gilbert,Intern,2025-10-29,,ACTIVE
+U0115,Brandon King,cordovarichard@example.net,Marketing,Senior SWE,John Peterson,Full-Time,2025-11-26,2025-12-02,INACTIVE
+U0116,April Booth,mgutierrez@example.net,Sales,Analyst,Sharon Cochran,Intern,2025-09-29,2026-01-31,INACTIVE
+U0117,Peter Garrett,harrisandrea@example.com,Engineering,Director,Tammy Gonzales,Intern,2026-04-23,,ACTIVE
+U0118,Michael Martinez,jennifercollins@example.org,IT,SWE,Sandra Williams,Intern,2026-01-25,,ACTIVE
+U0119,Anna Gay,murraydavid@example.org,Engineering,VP,Angie Henderson,Contractor,2026-02-25,2026-04-12,INACTIVE
+U0120,Dr. Jordan Hill PhD,jsanchez@example.org,Operations,Designer,Robert Peterson,Full-Time,2026-01-28,,ACTIVE
+U0121,Thomas Romero,michellehill@example.com,Finance,Director,Trevor Fisher,Intern,2026-02-22,,ACTIVE
+U0122,Richard Adams,campbellkenneth@example.net,IT,Director,Victoria Valdez,Full-Time,2025-08-03,,ACTIVE
+U0123,Mary Grimes,wryan@example.com,HR,Manager,Paige Carlson,Contractor,2026-04-07,,ACTIVE
+U0124,Kimberly Gibson,molly39@example.com,HR,VP,Abigail Shaffer,Contractor,2025-12-03,,ACTIVE
+U0125,Reginald Williams,zthornton@example.com,Marketing,VP,Joseph Hayes,Contractor,2025-12-11,,ACTIVE
+U0126,Matthew Hoover,tylerjohnson@example.net,Finance,Director,John Brown,Full-Time,2026-03-11,,ACTIVE
+U0127,Evelyn Garcia,dgarcia@example.org,Engineering,Manager,Alan Phillips,Contractor,2026-02-25,,ACTIVE
+U0128,Jennifer Pena,charlesharrington@example.com,Marketing,Designer,Alexander Collins,Intern,2026-02-26,,ACTIVE
+U0129,Michael Santos,melissa86@example.com,Engineering,Senior SWE,Rebecca Ramsey,Full-Time,2026-01-13,,ACTIVE
+U0130,Stacy Freeman,williamsonjimmy@example.net,Sales,VP,Richard Adams,Intern,2026-03-18,,ACTIVE
+U0131,Yolanda Francis,wgood@example.net,Operations,VP,Robert Peterson,Intern,2026-02-07,,ACTIVE
+U0132,Ashlee Jackson,rebecca05@example.org,Sales,Manager,Angela Morton,Intern,2025-09-26,,ACTIVE
+U0133,James Thomas,yknight@example.org,Operations,Staff SWE,Rita Keith,Full-Time,2026-02-22,,ACTIVE
+U0134,Bob Pitts,tyleraguilar@example.org,Finance,Director,Shannon Jones,Full-Time,2025-11-18,,ACTIVE
+U0135,David Scott,nolansteven@example.com,Marketing,Director,Abigail Shaffer,Intern,2026-03-20,2026-03-25,INACTIVE
+U0136,Brooke Alexander,vanessa46@example.net,Engineering,Director,Carmen Smith,Intern,2026-02-26,2026-02-27,INACTIVE
+U0137,Ryan Gonzalez,gcastaneda@example.org,Finance,Director,Thomas Romero,Contractor,2026-01-31,,ACTIVE
+U0138,Ian Phillips,andrew64@example.org,Engineering,Director,Mary Grimes,Full-Time,2025-07-23,,ACTIVE
+U0139,Melissa Garner,lozanojulie@example.com,Engineering,SWE,Michael Evans,Full-Time,2026-04-04,,ACTIVE
+U0140,Crystal Pham,danaoliver@example.net,Engineering,Manager,Angela Morton,Intern,2026-01-19,,ACTIVE
+U0141,Patricia Becker,courtneyberger@example.net,IT,Manager,Bob Pitts,Contractor,2026-02-05,,ACTIVE
+U0142,Richard Johnson,jessica14@example.com,Sales,Analyst,Trevor Fisher,Intern,2026-05-03,2026-06-19,INACTIVE
+U0143,Casey Anderson,alyssa42@example.com,Engineering,Manager,Victoria Johnson,Contractor,2026-05-24,2026-05-31,INACTIVE
+U0144,Terry Coffey,julie51@example.com,Marketing,Senior SWE,Sherry Wood,Full-Time,2026-01-15,,ACTIVE
+U0145,Brenda Levy,zcoffey@example.net,Finance,Designer,Stephanie Freeman,Full-Time,2025-10-16,,ACTIVE
+U0146,Richard Smith,gibsonemily@example.net,Sales,Designer,Mark Lynch,Intern,2025-10-17,,ACTIVE
+U0147,James Little,daniel37@example.org,IT,Manager,Tammy Gonzales,Full-Time,2026-03-25,,ACTIVE
+U0148,Terri Murphy,deborahreid@example.com,Marketing,Director,Cynthia Wilson,Full-Time,2025-07-20,,ACTIVE
+U0149,Elizabeth Ortiz,brandonjohnson@example.com,Sales,Director,Robert Costa,Full-Time,2026-02-14,,ACTIVE
+U0150,David Medina,qchavez@example.net,Operations,Analyst,Jeremiah Reeves,Intern,2026-03-23,,ACTIVE
+U0151,Kimberly Matthews,nicolepena@example.com,Engineering,SWE,David Davis,Intern,2025-12-02,,ACTIVE
+U0152,Teresa Ramirez,jeff73@example.com,Engineering,Senior SWE,Erika Terry,Intern,2026-04-10,,ACTIVE
+U0153,Michael Stephens,bruce43@example.org,Engineering,Director,Terri Murphy,Full-Time,2025-09-17,,ACTIVE
+U0154,Samantha Davis,darleneharper@example.org,Operations,Designer,John Brown,Full-Time,2026-04-15,,ACTIVE
+U0155,Gavin Zhang,caseyhubbard@example.org,IT,Designer,Jessica Holmes,Contractor,2025-12-15,,ACTIVE
+U0156,Robin Hall,kristinacarlson@example.com,Sales,Senior SWE,Victoria Valdez,Contractor,2026-01-16,,ACTIVE
+U0157,Brianna Anderson,lauren10@example.org,Sales,Analyst,Patricia Becker,Full-Time,2026-02-07,2026-04-12,INACTIVE
+U0158,Richard Young,alfred40@example.org,Sales,Senior SWE,Marc Lynch,Intern,2025-06-20,,ACTIVE
+U0159,Kelly Reese,xwest@example.net,Finance,Designer,Doris Hall,Full-Time,2025-09-24,,ACTIVE
+U0160,Jodi Walker,acostaregina@example.net,Finance,Designer,Shannon Rivera,Full-Time,2025-10-02,,ACTIVE
+U0161,Judith Maynard,lutzmelanie@example.com,Marketing,Director,Robert Costa,Intern,2026-02-23,2026-05-14,INACTIVE
+U0162,Katherine Browning,lammarc@example.org,Finance,Manager,Sherry Wood,Contractor,2026-03-29,2026-05-20,INACTIVE
+U0163,Donald Schultz,oscar98@example.com,Engineering,Manager,Connor West,Contractor,2025-08-19,,ACTIVE
+U0164,Larry Garcia,farrelldebra@example.net,Marketing,Designer,Stephanie Freeman,Intern,2026-06-16,,ACTIVE
+U0165,Cindy Hayes,robertwilcox@example.com,IT,Designer,Thomas Romero,Full-Time,2026-02-08,,ACTIVE
+U0166,Brandon Simmons,nicholas27@example.org,HR,Manager,Samantha Davis,Intern,2025-08-28,,ACTIVE
+U0167,Bradley Reynolds,lisa80@example.net,Sales,Analyst,Robert Medina,Intern,2025-11-03,,ACTIVE
+U0168,Kristina Santiago,qgomez@example.com,Sales,Director,Kimberly Matthews,Intern,2026-05-23,,ACTIVE
+U0169,Michelle Schmitt,michael98@example.org,Marketing,Designer,Ian Phillips,Contractor,2025-12-13,,ACTIVE
+U0170,John Boone,megan51@example.com,IT,Analyst,Peter Garrett,Contractor,2025-09-24,,ACTIVE
+U0171,Renee Bruce,lynchdiane@example.net,Marketing,Analyst,Stephanie Gilbert,Contractor,2025-07-12,,ACTIVE
+U0172,Christopher Park,sandra50@example.org,HR,Analyst,Beth Oneill,Intern,2026-05-19,,ACTIVE
+U0173,Kylie Morales,joycebonilla@example.org,HR,SWE,Carmen Smith,Intern,2026-04-18,,ACTIVE
+U0174,Cindy Barnes,eric45@example.net,Engineering,Designer,Shannon Jones,Intern,2026-02-08,2026-03-16,INACTIVE
+U0175,Sophia Moore,craigjoseph@example.net,HR,Staff SWE,Linda Burns,Contractor,2025-11-02,,ACTIVE
+U0176,Lawrence Perry,kariwilson@example.com,Operations,Analyst,Bradley Reynolds,Full-Time,2025-12-05,,ACTIVE
+U0177,Michael Watkins,brandon69@example.org,IT,Analyst,Jacob Obrien,Intern,2026-02-24,,ACTIVE
+U0178,Eric Clark,kathrynroberts@example.org,Engineering,Senior SWE,Richard Lawson,Intern,2026-06-05,,ACTIVE
+U0179,Paul Thompson,opatel@example.net,Marketing,Senior SWE,Pamela Thompson,Full-Time,2026-05-10,,ACTIVE
+U0180,Mary Gomez,chensley@example.com,Engineering,Designer,Shawn Baker,Intern,2025-11-20,,ACTIVE
+U0181,Thomas Atkins,tberry@example.net,Engineering,VP,Rebecca Henderson,Contractor,2025-12-20,,ACTIVE
+U0182,Brian Smith,george97@example.net,Marketing,Manager,Brooke Alexander,Contractor,2026-04-05,,ACTIVE
+U0183,Anita Richard,ryanmorales@example.org,Marketing,Staff SWE,Sandra Williams,Full-Time,2026-04-28,,ACTIVE
+U0184,Eric Morgan,kimberly18@example.net,Finance,Manager,Jennifer Pena,Intern,2025-09-01,,ACTIVE
+U0185,Jordan Bullock,michael23@example.org,Operations,Director,Michael Martinez,Contractor,2026-05-27,2026-06-10,INACTIVE
+U0186,Craig Morrison,thompsonkendra@example.com,Sales,Staff SWE,Mark Lynch,Contractor,2025-12-13,,ACTIVE
+U0187,Justin Riley,michelle52@example.com,Sales,Analyst,Michael Watkins,Contractor,2026-02-08,,ACTIVE
+U0188,Jeremy Turner,brittany58@example.org,Marketing,Analyst,Kimberly Gibson,Full-Time,2025-10-19,,ACTIVE
+U0189,Jesse Brown,chase19@example.net,Sales,Director,Mary Gomez,Contractor,2025-07-01,,ACTIVE
+U0190,Julie Spencer,colelisa@example.net,Operations,Analyst,Chris Reyes,Full-Time,2026-04-05,,ACTIVE
+U0191,Larry Mason,hayeslisa@example.com,IT,SWE,Robin Hall,Intern,2026-03-01,,ACTIVE
+U0192,Mrs. Maria Williams,hritter@example.net,Sales,Manager,Robin Hall,Contractor,2025-10-10,,ACTIVE
+U0193,Helen Hardin,vortiz@example.net,Finance,Director,Cindy Barnes,Intern,2026-05-23,,ACTIVE
+U0194,Rachel Holland,riveraangela@example.com,Marketing,Senior SWE,Judith Maynard,Intern,2025-07-10,,ACTIVE
+U0195,Nathaniel Douglas,mathewaguilar@example.org,HR,SWE,Elizabeth Ortiz,Contractor,2025-08-26,2026-01-24,INACTIVE
+U0196,Emily Douglas,tanderson@example.org,Sales,Analyst,Sandra Williams,Full-Time,2025-08-26,,ACTIVE
+U0197,James Conner,elizabethcalderon@example.net,Sales,Director,Shawn Baker,Contractor,2026-02-21,,ACTIVE
+U0198,Susan Davis DDS,andrew42@example.org,Sales,VP,Connor West,Contractor,2025-07-28,2025-11-20,INACTIVE
+U0199,Ralph Lee,ericphillips@example.org,IT,Analyst,Casey Anderson,Contractor,2025-08-05,,ACTIVE
+U0200,Kimberly Rodgers,stanleynancy@example.net,Engineering,Director,Ian Phillips,Full-Time,2026-02-07,,ACTIVE
+U0201,James Martin,jenniferwilliams@example.com,Operations,Director,David Medina,Contractor,2026-05-12,,ACTIVE
+U0202,Cynthia Wallace,karen73@example.net,Engineering,Manager,Thomas Romero,Full-Time,2026-05-03,,ACTIVE
+U0203,Vincent Mueller,michealvalentine@example.com,Finance,VP,Brianna Anderson,Full-Time,2026-05-17,2026-06-15,INACTIVE
+U0204,Douglas Reyes,mburch@example.net,Operations,Director,Bradley Reynolds,Contractor,2025-08-18,2025-09-06,INACTIVE
+U0205,David Davidson,angela18@example.org,Sales,Designer,Connor West,Full-Time,2025-10-18,,ACTIVE
+U0206,Phillip Nelson,mariahdavis@example.org,Marketing,Analyst,Peter Garrett,Contractor,2026-05-29,,ACTIVE
+U0207,Stacey Arias,gbrown@example.com,Operations,Analyst,Kimberly Matthews,Intern,2025-09-07,,ACTIVE
+U0208,Zachary Brooks,florescory@example.net,Operations,Senior SWE,Matthew Hoover,Intern,2026-01-14,,ACTIVE
+U0209,Raven Taylor,samantha72@example.net,Sales,SWE,Michael Watkins,Contractor,2025-10-09,,ACTIVE
+U0210,Luis Bullock,scottmary@example.net,Marketing,VP,Shannon Jones,Intern,2025-12-25,,ACTIVE
+U0211,Lisa Henderson,john10@example.org,Operations,VP,Tricia Valencia,Contractor,2025-11-08,,ACTIVE
+U0212,Riley Bryant,copelandvincent@example.net,Engineering,Designer,Jessica Holmes,Intern,2025-10-06,,ACTIVE
+U0213,Jose Allen,kellysmith@example.com,Finance,SWE,Kimberly Burgess,Contractor,2025-10-22,,ACTIVE
+U0214,Jason Beck,millsmichael@example.net,IT,Manager,Deborah Mason,Intern,2025-10-04,,ACTIVE
+U0215,Rachel Romero,myerstheodore@example.net,IT,Manager,Barbara Riggs,Full-Time,2026-04-21,2026-06-14,INACTIVE
+U0216,James Burgess,kristina53@example.net,Marketing,Staff SWE,Melissa Garner,Contractor,2025-09-17,2025-09-30,INACTIVE
+U0217,Ashley Perkins,dennis58@example.com,Marketing,SWE,Jason Peters,Full-Time,2026-04-17,,ACTIVE
+U0218,Carrie Maxwell,epollard@example.net,Marketing,Director,Zachary Hicks,Full-Time,2026-01-21,,ACTIVE
+U0219,Chad Baldwin,mjohnson@example.org,Operations,Senior SWE,Richard Adams,Contractor,2025-12-22,,ACTIVE
+U0220,Stacey Stewart,zachary87@example.com,Engineering,Designer,Michael Santos,Full-Time,2026-04-30,2026-06-19,INACTIVE
+U0221,Matthew Mitchell,glennmartin@example.org,IT,Director,Michael Martinez,Intern,2025-07-05,2026-03-07,INACTIVE
+U0222,Jessica Ross,ykline@example.com,IT,Analyst,Kathryn Snyder,Intern,2025-08-14,,ACTIVE
+U0223,Kathleen Jimenez,laurie61@example.com,HR,Senior SWE,David Bradley,Contractor,2026-04-27,2026-05-05,INACTIVE
+U0224,Samantha Gardner,curtis54@example.com,Sales,VP,Adrian Ferguson,Intern,2026-03-18,,ACTIVE
+U0225,Mitchell Jackson,cbell@example.net,Finance,Analyst,Shannon Jones,Intern,2025-08-17,,ACTIVE
+U0226,Heather Bolton,danielle01@example.net,Operations,Manager,David Davis,Contractor,2025-10-14,,ACTIVE
+U0227,Heidi Owen,stephaniethomas@example.net,IT,Designer,Joseph Hayes,Contractor,2025-08-07,,ACTIVE
+U0228,Jessica Martinez,kimberlydiaz@example.com,Sales,Director,Tiffany Vaughn,Full-Time,2026-06-06,,ACTIVE
+U0229,Amanda Hernandez,xrush@example.com,Engineering,Senior SWE,Jose Allen,Full-Time,2025-08-06,,ACTIVE
+U0230,Laura Moreno,redwards@example.org,Operations,VP,Zachary Brooks,Full-Time,2026-03-31,2026-06-10,INACTIVE
+U0231,Allison Lopez,hmcintyre@example.com,Finance,VP,Christopher Park,Full-Time,2026-01-16,,ACTIVE
+U0232,Michele Lewis,heather73@example.org,Operations,Analyst,Kathleen Jimenez,Intern,2025-07-16,,ACTIVE
+U0233,Benjamin Thompson,zosborn@example.net,Finance,Director,Robert Peterson,Full-Time,2026-04-11,,ACTIVE
+U0234,Victoria Contreras,piercekelly@example.com,Marketing,Designer,Lisa Alvarado,Full-Time,2025-12-16,,ACTIVE
+U0235,Michelle Ho,laurahicks@example.org,Sales,Senior SWE,Emily Douglas,Contractor,2026-04-09,,ACTIVE
+U0236,Dr. Cynthia Snyder,angela57@example.net,HR,SWE,Robin Hall,Intern,2026-06-10,,ACTIVE
+U0237,Stephen Jones,ukey@example.com,Marketing,Director,Mary Gomez,Contractor,2025-12-10,,ACTIVE
+U0238,Patricia Morrow,martinezlogan@example.org,Marketing,Staff SWE,Brenda Levy,Intern,2026-01-11,2026-01-18,INACTIVE
+U0239,Michael Cooper,katrinaanderson@example.net,Engineering,Manager,Paige Carlson,Contractor,2026-02-07,,ACTIVE
+U0240,Amy Martinez,kevinmartin@example.net,Sales,Director,Jordan Bullock,Contractor,2026-04-06,,ACTIVE
+U0241,Travis Stone,meghan43@example.net,Engineering,Staff SWE,Sherry Wood,Intern,2025-07-15,,ACTIVE
+U0242,Denise Weber,shawgary@example.net,Sales,Designer,John Boone,Contractor,2026-02-23,,ACTIVE
+U0243,Matthew Le,megan90@example.org,HR,Director,William Wilson,Intern,2025-08-17,,ACTIVE
+U0244,Travis Wise,debra96@example.net,Engineering,Director,Cindy Barnes,Intern,2026-04-19,,ACTIVE
+U0245,Kathleen Burton,dawn47@example.org,Operations,Director,Jennifer Rocha,Full-Time,2026-01-08,,ACTIVE
+U0246,Melinda Evans,barkereric@example.com,Engineering,SWE,Matthew Ross,Contractor,2025-10-06,,ACTIVE
+U0247,Mr. Lawrence Edwards,jessica56@example.org,IT,Director,Stephanie Freeman,Contractor,2025-08-20,2026-03-28,INACTIVE
+U0248,Kayla Rodriguez,stevenadams@example.org,Marketing,Staff SWE,Adrian Ferguson,Intern,2026-06-15,,ACTIVE
+U0249,Anthony Dougherty,kwright@example.com,Finance,VP,Mark Lynch,Contractor,2025-07-11,,ACTIVE
+U0250,Michelle Lee,tyronerobertson@example.com,HR,Senior SWE,Matthew Mitchell,Contractor,2026-04-10,,ACTIVE
+U0251,Kathleen Davis,pwagner@example.org,HR,Analyst,Stephanie Freeman,Full-Time,2026-01-13,2026-04-06,INACTIVE
+U0252,Amber Campbell,amitchell@example.org,Marketing,Designer,Jose Allen,Intern,2025-12-22,2026-01-18,INACTIVE
+U0253,Stephen Luna,zdiaz@example.org,Marketing,Analyst,Kimberly Matthews,Contractor,2026-03-15,2026-04-23,INACTIVE
+U0254,Chloe Tran,hughesshannon@example.net,Operations,VP,Renee Mcdaniel,Contractor,2025-09-14,2025-11-11,INACTIVE
+U0255,William Becker,andersoncolin@example.com,Finance,Manager,Michele Lewis,Contractor,2025-12-16,,ACTIVE
+U0256,Gina Mcmillan,jameshicks@example.net,IT,Staff SWE,Richard Lawson,Full-Time,2025-09-02,,ACTIVE
+U0257,Andrew Reeves,jstone@example.net,Marketing,Staff SWE,Michael Evans,Full-Time,2026-05-07,,ACTIVE
+U0258,Brenda Velazquez,francisco94@example.net,IT,Designer,Brandon Simmons,Intern,2025-11-28,,ACTIVE
+U0259,Ronald Patel,thomas05@example.com,Engineering,Designer,Heidi Owen,Intern,2025-11-22,,ACTIVE
+U0260,Veronica Silva,carlsonjoseph@example.net,Finance,SWE,Thomas Atkins,Intern,2025-07-27,,ACTIVE
+U0261,Paula Lane,silvageorge@example.net,HR,SWE,Connor West,Contractor,2025-11-13,2026-06-19,INACTIVE
+U0262,Patricia James,anthonyvaughan@example.org,Engineering,Analyst,Stephen Jones,Intern,2026-03-30,,ACTIVE
+U0263,Jeremy Barnes,avaughn@example.net,Operations,SWE,Allison Lopez,Intern,2026-05-19,,ACTIVE
+U0264,Tami Salas,thorntonapril@example.net,Finance,Designer,Andrew Reeves,Full-Time,2025-07-21,,ACTIVE
+U0265,Matthew Fox,sue78@example.com,IT,VP,Michelle Harris,Intern,2026-05-16,,ACTIVE
+U0266,Megan Dillon,chelsea33@example.com,Marketing,Designer,Mitchell Jackson,Intern,2026-03-14,,ACTIVE
+U0267,Courtney Dudley,kellie37@example.com,Sales,VP,Brenda Levy,Contractor,2026-01-15,,ACTIVE
+U0268,Justin Michael,keith98@example.com,Operations,SWE,Christopher Park,Full-Time,2025-12-05,2026-05-27,INACTIVE
+U0269,Jennifer Reed,kellyroberts@example.net,HR,Director,Stacy Freeman,Intern,2026-05-22,,ACTIVE
+U0270,Thomas Douglas,ilewis@example.com,Finance,Staff SWE,Renee Bruce,Full-Time,2026-04-14,,ACTIVE
+U0271,Melissa Taylor,johnsantiago@example.net,Sales,Director,James Martin,Full-Time,2026-04-20,,ACTIVE
+U0272,David Garcia,jennifer12@example.org,Engineering,Director,Helen Hardin,Intern,2025-12-05,,ACTIVE
+U0273,Vanessa Moore,mwoods@example.com,Operations,Senior SWE,Ashley Perkins,Intern,2025-12-22,2026-03-11,INACTIVE
+U0274,Matthew Velez,pearsonjesse@example.net,Marketing,Manager,Sophia Moore,Contractor,2025-09-26,,ACTIVE
+U0275,Taylor Gentry,robertmonroe@example.org,Marketing,Staff SWE,Kristine Garcia,Contractor,2025-08-10,,ACTIVE
+U0276,Jennifer Simpson DVM,nancy04@example.net,Finance,SWE,Kylie Morales,Intern,2025-08-26,,ACTIVE
+U0277,Tanya Rogers,ihays@example.net,Marketing,Staff SWE,Alan Phillips,Intern,2026-05-05,,ACTIVE
+U0278,Todd Rosales MD,lisarivera@example.net,Marketing,Designer,Lisa Brandt,Contractor,2025-12-23,,ACTIVE
+U0279,David Lopez,krystal93@example.org,Marketing,Designer,Richard Smith,Intern,2026-02-04,,ACTIVE
+U0280,Margaret Sullivan,frobertson@example.com,Marketing,Director,Travis Stone,Full-Time,2025-12-25,,ACTIVE
+U0281,Cathy Taylor,shari04@example.com,Finance,Designer,Stephen Jones,Contractor,2026-01-01,,ACTIVE
+U0282,Paul Finley,brandi90@example.com,HR,Staff SWE,Joseph Hayes,Intern,2025-08-29,,ACTIVE
+U0283,Melissa Brown,marshallerik@example.net,Engineering,Designer,Larry Mason,Intern,2025-08-11,,ACTIVE
+U0284,Stephanie Padilla,hannah45@example.net,Finance,Senior SWE,Richard Smith,Full-Time,2025-09-10,,ACTIVE
+U0285,Tyler Mendoza,madkins@example.com,Finance,Staff SWE,Samantha Gardner,Full-Time,2025-10-11,,ACTIVE
+U0286,Joshua Ruiz,kathleenbecker@example.net,Sales,SWE,Jose Allen,Full-Time,2026-01-08,,ACTIVE
+U0287,Angela Griffin,christian91@example.org,Marketing,Analyst,Victoria Valdez,Contractor,2025-10-12,2026-06-07,INACTIVE
+U0288,Stephanie Harris,franklinbond@example.com,Engineering,VP,Stephanie Freeman,Full-Time,2025-07-09,,ACTIVE
+U0289,Daniel Aguilar,nolansean@example.org,IT,Designer,John Brown,Intern,2026-02-15,,ACTIVE
+U0290,Jose Bryant,hansenemily@example.com,Engineering,Senior SWE,Joel Nelson,Contractor,2025-10-08,,ACTIVE
+U0291,Jennifer Velasquez,bethwilliams@example.com,Finance,Analyst,Renee Mcdaniel,Contractor,2025-10-19,,ACTIVE
+U0292,Kimberly Brown,andersenthomas@example.com,Engineering,Manager,Rachel Romero,Intern,2026-05-04,,ACTIVE
+U0293,Randy Cannon,ybrooks@example.com,Engineering,Designer,Taylor Gentry,Full-Time,2026-05-09,,ACTIVE
+U0294,Susan Bennett,desireebailey@example.org,Marketing,Staff SWE,David Medina,Contractor,2025-06-20,,ACTIVE
+U0295,Jenna Anderson DVM,avilatiffany@example.com,Marketing,Analyst,Tiffany Vaughn,Intern,2026-05-28,2026-06-08,INACTIVE
+U0296,Kimberly Patel,johnreed@example.com,Engineering,SWE,Kimberly Rodgers,Contractor,2025-07-12,,ACTIVE
+U0297,Shaun Cannon,pachecorobert@example.org,Sales,Director,Daniel Adams,Contractor,2025-07-24,,ACTIVE
+U0298,Austin Wheeler,tharper@example.org,Operations,Senior SWE,Renee Bruce,Full-Time,2025-07-12,,ACTIVE
+U0299,Andrew Gonzales,karenparsons@example.org,Sales,Staff SWE,Patricia Morrow,Intern,2026-02-20,,ACTIVE
+U0300,Donna Cabrera,barbara53@example.com,IT,Staff SWE,Carmen Smith,Intern,2026-02-09,2026-04-01,INACTIVE
+U0301,Victoria Boyd,dturner@example.net,Engineering,Manager,Kim Martinez,Contractor,2025-11-25,,ACTIVE
+U0302,Sheryl Buck,dpeters@example.com,IT,Designer,Stacy Freeman,Full-Time,2026-05-17,,ACTIVE
+U0303,Megan Floyd,heather62@example.com,Sales,SWE,John Boone,Contractor,2025-08-22,,ACTIVE
+U0304,Paul Wells,kevinzimmerman@example.com,HR,Analyst,Heather Bolton,Contractor,2025-12-10,,ACTIVE
+U0305,Kristina Faulkner,paulscott@example.com,HR,Designer,Jesse Brown,Intern,2025-11-03,,ACTIVE
+U0306,Tammy Boone,nicholsmaria@example.org,Operations,Analyst,Sherry Wood,Contractor,2026-04-24,,ACTIVE
+U0307,Michael Morrison,lopezkathleen@example.net,Marketing,Director,Cindy Hayes,Full-Time,2025-07-30,,ACTIVE
+U0308,Claire Clark,kevin03@example.org,Sales,Director,Amanda Hernandez,Intern,2026-01-24,,ACTIVE
+U0309,Autumn Key,srocha@example.net,HR,VP,Amanda Hernandez,Full-Time,2025-12-17,,ACTIVE
+U0310,Jennifer Allen,kimberly67@example.net,HR,Director,Connor West,Full-Time,2026-05-29,,ACTIVE
+U0311,Elizabeth Ward,zowens@example.net,Sales,Staff SWE,Tricia Valencia,Full-Time,2026-04-27,,ACTIVE
+U0312,Ryan Rocha,lawrence09@example.org,HR,SWE,Michael Snyder,Full-Time,2025-10-18,,ACTIVE
+U0313,Alexis Tran,mphillips@example.com,Sales,VP,James Conner,Intern,2025-07-06,,ACTIVE
+U0314,Kelly Sanchez,jonathan77@example.com,Operations,Designer,Julie Spencer,Contractor,2026-02-02,,ACTIVE
+U0315,Robert Jackson,iwhite@example.net,Finance,Staff SWE,David Garcia,Contractor,2026-01-09,,ACTIVE
+U0316,Kelly Combs,landryelizabeth@example.org,Sales,Manager,Erika Terry,Full-Time,2025-09-23,,ACTIVE
+U0317,Ryan Hall,albertwagner@example.com,HR,Senior SWE,David Scott,Contractor,2026-06-15,,ACTIVE
+U0318,Mark Peck,bhopkins@example.org,Finance,Director,Amber Campbell,Full-Time,2025-08-21,2025-09-27,INACTIVE
+U0319,Jennifer Smith,amanda40@example.net,HR,Staff SWE,Jessica Martinez,Full-Time,2026-06-04,,ACTIVE
+U0320,Megan Drake,danieldavis@example.org,Sales,VP,Michael Cross,Intern,2026-03-24,,ACTIVE
+U0321,Manuel King,joseph61@example.com,Sales,Staff SWE,Mary Rogers,Contractor,2026-03-07,,ACTIVE
+U0322,Judy Sanchez,kevinclayton@example.org,Marketing,Staff SWE,Richard Adams,Contractor,2025-07-03,,ACTIVE
+U0323,Shannon Malone,sullivannicholas@example.com,Finance,VP,Amy Martinez,Intern,2025-08-25,,ACTIVE
+U0324,Adam Jackson,pbruce@example.com,Engineering,Senior SWE,Kelly Reese,Contractor,2026-02-20,,ACTIVE
+U0325,Shannon Davis,hallrachel@example.net,IT,Analyst,Jenna Anderson DVM,Full-Time,2025-08-23,,ACTIVE
+U0326,Karen Williams,cohenjuan@example.net,Operations,Senior SWE,Allison Lopez,Contractor,2026-06-03,,ACTIVE
+U0327,Amanda Mcfarland,alexis39@example.org,Marketing,Staff SWE,Robert Contreras,Contractor,2026-03-04,,ACTIVE
+U0328,Michelle Sanders,evansanne@example.net,Engineering,Senior SWE,Megan Dillon,Full-Time,2025-11-22,,ACTIVE
+U0329,Jasmine Mosley,patrick21@example.net,Sales,Manager,Eric Clark,Intern,2025-11-12,,ACTIVE
+U0330,Haley Davis,marypeterson@example.net,Sales,Manager,Karen Williams,Intern,2025-11-07,2026-01-23,INACTIVE
+U0331,Jennifer Ayala,walterskristen@example.com,Finance,Senior SWE,Brenda Velazquez,Intern,2025-09-14,,ACTIVE
+U0332,Henry Pugh MD,nmiller@example.com,Finance,Staff SWE,Robert Medina,Intern,2026-05-05,,ACTIVE
+U0333,Michelle Miller,normanbowers@example.org,Finance,VP,Daniel Aguilar,Full-Time,2025-07-04,2026-05-28,INACTIVE
+U0334,Emily Rodriguez,hahnsean@example.com,IT,Director,Derek Thomas,Intern,2026-01-19,,ACTIVE
+U0335,Brandon Jordan,fgarcia@example.com,Engineering,Designer,Judy Sanchez,Intern,2025-11-15,,ACTIVE
+U0336,Linda Mueller,asmith@example.com,Sales,Designer,Matthew Hoover,Intern,2026-01-13,,ACTIVE
+U0337,Misty Hansen,ashleyjackson@example.com,Engineering,SWE,Cynthia Wells,Contractor,2026-01-18,,ACTIVE
+U0338,Derrick Adams,bryanhamilton@example.com,Marketing,VP,Elizabeth Ward,Full-Time,2025-11-27,,ACTIVE
+U0339,Richard Ward,jennifersimpson@example.net,Sales,VP,David Davidson,Full-Time,2025-12-26,,ACTIVE
+U0340,Brian Torres,ncook@example.com,Engineering,VP,Kimberly Gibson,Contractor,2025-08-21,,ACTIVE
+U0341,Erin Cook,kevinmorrison@example.net,Marketing,Staff SWE,Rita Keith,Full-Time,2025-11-15,,ACTIVE
+U0342,Ernest Oconnell,kelly79@example.org,IT,Analyst,Jennifer Pena,Full-Time,2025-12-04,,ACTIVE
+U0343,Douglas Hartman,daniel93@example.net,Operations,VP,Adrian Ferguson,Full-Time,2026-03-02,,ACTIVE
+U0344,Catherine Saunders MD,nhahn@example.com,HR,Designer,Richard Young,Contractor,2025-07-01,2026-01-18,INACTIVE
+U0345,Sandra Jones,ichambers@example.net,Finance,Designer,Kimberly Gibson,Full-Time,2026-04-14,,ACTIVE
+U0346,David Moore,emccormick@example.com,Engineering,Director,Chloe Tran,Intern,2026-05-20,,ACTIVE
+U0347,Karen Morales DDS,ystephens@example.com,Sales,SWE,William Wilson,Contractor,2025-08-27,,ACTIVE
+U0348,Robin Wheeler,rodriguezjohn@example.net,Operations,VP,Stacey Arias,Contractor,2025-07-13,,ACTIVE
+U0349,Matthew Williams,vrasmussen@example.com,Finance,Manager,Craig Morrison,Intern,2025-11-14,2026-03-23,INACTIVE
+U0350,Brett Walker,seanmyers@example.net,HR,Director,Megan Drake,Intern,2026-04-28,2026-05-04,INACTIVE
+U0351,Kathryn Cooper,webbkenneth@example.org,HR,VP,Cindy Barnes,Intern,2025-12-24,,ACTIVE
+U0352,Todd Thomas,matthew38@example.com,Marketing,Analyst,Andrew Reeves,Full-Time,2025-07-13,2025-12-30,INACTIVE
+U0353,Brent Bowen,tflores@example.org,IT,Designer,Megan Dillon,Contractor,2025-09-04,,ACTIVE
+U0354,Ashley Sweeney,byrdfrank@example.net,Finance,Staff SWE,Kristina Santiago,Intern,2025-11-30,,ACTIVE
+U0355,Christopher Moore,omullen@example.com,Finance,Director,Paul Wells,Contractor,2026-03-06,,ACTIVE
+U0356,Charlotte Sandoval,njohnson@example.org,Finance,Designer,Daniel Aguilar,Contractor,2026-02-18,,ACTIVE
+U0357,Jeffrey Smith,jamiegoodwin@example.org,Sales,VP,Sandra Jones,Full-Time,2026-01-19,,ACTIVE
+U0358,Rebecca Herrera,mark71@example.com,IT,SWE,Tammy Boone,Contractor,2025-11-02,,ACTIVE
+U0359,Katherine Church,candice96@example.net,IT,Manager,Timothy Duncan,Intern,2026-02-20,,ACTIVE
+U0360,Harold Ellis,lisamccarthy@example.com,Operations,Analyst,Rebecca Ramsey,Intern,2025-10-22,2026-04-19,INACTIVE
+U0361,Leslie Powers,david41@example.org,Engineering,Manager,Joel Nelson,Contractor,2025-11-27,,ACTIVE
+U0362,Charles Price,baileyhenderson@example.com,HR,Manager,Lisa Henderson,Intern,2026-04-29,,ACTIVE
+U0363,Melissa Brewer,angelaburns@example.org,IT,SWE,Charles Price,Full-Time,2026-03-12,,ACTIVE
+U0364,Ryan Harvey,stephanie72@example.org,Sales,Designer,Thomas Douglas,Contractor,2025-11-27,,ACTIVE
+U0365,Tracey Wagner,fortiz@example.com,HR,VP,Margaret Sullivan,Contractor,2026-06-01,,ACTIVE
+U0366,Jill Jackson,flynnjeffrey@example.org,Operations,Director,Alexis Tran,Contractor,2025-09-26,,ACTIVE
+U0367,Joshua Jackson,xcunningham@example.com,Sales,Director,April Booth,Contractor,2025-11-14,,ACTIVE
+U0368,Ashley Wilson,amber07@example.net,Operations,Designer,Donald Schultz,Contractor,2025-12-15,,ACTIVE
+U0369,Jeffery Fitzgerald,kennethkidd@example.com,IT,Director,Terri Murphy,Full-Time,2026-04-09,,ACTIVE
+U0370,Scott Miller,rowejoel@example.net,HR,Analyst,Michael Watkins,Full-Time,2025-11-15,2026-05-16,INACTIVE
+U0371,Heather Page,imartin@example.org,Engineering,VP,Heidi Owen,Intern,2025-10-29,,ACTIVE
+U0372,Renee Hudson,candice25@example.net,Marketing,Manager,Jennifer Simpson DVM,Contractor,2026-04-03,,ACTIVE
+U0373,Kenneth Farley,taylorkaren@example.com,Marketing,Senior SWE,Kelly Combs,Intern,2026-04-16,,ACTIVE
+U0374,Wendy Camacho,jacquelineanderson@example.org,Engineering,Manager,Amanda Mcfarland,Full-Time,2025-07-16,2026-01-01,INACTIVE
+U0375,Sandra Juarez,kburns@example.net,Operations,Designer,Courtney Velasquez,Intern,2025-08-29,2026-06-06,INACTIVE
+U0376,Jason Hayes,powellkara@example.net,Marketing,Analyst,Brandon Jordan,Contractor,2026-02-19,,ACTIVE
+U0377,Jackie Clements,brandi17@example.net,IT,Director,Cindy Hayes,Contractor,2026-05-16,2026-05-21,INACTIVE
+U0378,Heather Brown,brobinson@example.org,Operations,Manager,Matthew Velez,Intern,2025-07-09,,ACTIVE
+U0379,Frank Campbell MD,ashleewashington@example.com,Marketing,Analyst,Robert Peterson,Full-Time,2026-01-09,,ACTIVE
+U0380,Pamela Williams,ksmith@example.com,Marketing,Director,Linda Burns,Full-Time,2025-11-19,,ACTIVE
+U0381,William Patterson,nicoleturner@example.com,Engineering,VP,Richard Smith,Contractor,2026-05-14,,ACTIVE
+U0382,Isaac Miller,brettgarrett@example.net,HR,Staff SWE,Ronald Patel,Contractor,2025-11-06,,ACTIVE
+U0383,Cynthia Rios,smiththomas@example.org,Engineering,VP,Michael Burton,Intern,2026-02-09,,ACTIVE
+U0384,Kelly Wallace,dominguezlisa@example.com,Operations,Staff SWE,Dr. Sharon James,Intern,2025-12-09,,ACTIVE
+U0385,Karen Perez,crosscurtis@example.com,Finance,Manager,Mary Rogers,Intern,2026-05-13,,ACTIVE
+U0386,Edwin Reyes,darlenebyrd@example.org,IT,Analyst,Tami Salas,Contractor,2025-08-03,,ACTIVE
+U0387,Alejandra Santos,nbell@example.net,Engineering,Staff SWE,John Brown,Contractor,2025-12-02,,ACTIVE
+U0388,Tamara Jensen,fheath@example.org,Engineering,Director,James Conner,Full-Time,2026-02-03,,ACTIVE
+U0389,Bryce Blair,sylvia52@example.org,Sales,Director,Andrew Gonzales,Intern,2026-04-09,2026-05-25,INACTIVE
+U0390,Bradley Tran,kimberly04@example.org,Operations,Manager,Tammy Allison,Intern,2025-08-19,,ACTIVE
+U0391,Katrina Adkins,debbie37@example.com,Marketing,Analyst,Todd Thomas,Intern,2026-06-15,,ACTIVE
+U0392,Jonathan Wheeler,hatfieldsarah@example.org,Operations,Senior SWE,Michelle Sanders,Contractor,2025-12-25,,ACTIVE
+U0393,Ryan Fisher,kathrynbest@example.org,Marketing,Staff SWE,Kathleen Burton,Full-Time,2026-02-07,,ACTIVE
+U0394,Austin Baker,livingstonstacy@example.com,Finance,VP,Jose Allen,Intern,2026-03-28,,ACTIVE
+U0395,Lori Mason,zhenderson@example.org,IT,Manager,Katrina Adkins,Full-Time,2026-06-03,,ACTIVE
+U0396,Kimberly Hernandez,collinswilliam@example.org,IT,Senior SWE,Thomas Douglas,Contractor,2026-03-17,,ACTIVE
+U0397,Brittney Murphy,collinssamuel@example.org,Engineering,Senior SWE,Tammy Allison,Intern,2026-03-05,,ACTIVE
+U0398,Brandon Hamilton,dsalazar@example.com,Finance,Staff SWE,Barbara Riggs,Contractor,2026-03-13,,ACTIVE
+U0399,Mary Thompson,zimmermanjacqueline@example.org,Operations,Manager,Ashley Wilson,Intern,2026-02-25,2026-05-01,INACTIVE
+U0400,Gregory Holmes PhD,gary24@example.net,HR,SWE,Benjamin Thompson,Full-Time,2026-03-09,,ACTIVE
+U0401,Patricia Johnson,enelson@example.com,Finance,SWE,Angela Griffin,Contractor,2026-05-30,,ACTIVE
+U0402,Laura Jones,ddixon@example.com,Operations,SWE,Vincent Mueller,Contractor,2025-06-21,,ACTIVE
+U0403,Carol Moore,shannonemily@example.org,Finance,Senior SWE,Jessica Holmes,Contractor,2025-12-13,,ACTIVE
+U0404,Jordan Williams,sanchezthomas@example.com,Finance,SWE,Kim Brown,Contractor,2025-07-06,,ACTIVE
+U0405,Cassidy Horne,tranrobin@example.net,Marketing,Staff SWE,Ryan Fisher,Intern,2026-05-16,,ACTIVE
+U0406,Courtney Wright,joseph19@example.com,Sales,Analyst,Laura Moreno,Contractor,2025-12-29,2026-06-16,INACTIVE
+U0407,Michael Williams,lindajarvis@example.com,IT,Staff SWE,Brandon Jordan,Contractor,2025-08-19,,ACTIVE
+U0408,John Campbell,mark87@example.org,Finance,Analyst,Melissa Taylor,Full-Time,2025-10-12,,ACTIVE
+U0409,Eddie Mueller,stevenvargas@example.com,IT,SWE,Michael Stephens,Contractor,2026-05-30,,ACTIVE
+U0410,Dr. Morgan Payne PhD,adamortiz@example.org,HR,Analyst,Michael Martinez,Full-Time,2026-02-10,,ACTIVE
+U0411,Makayla Steele,tapiaaaron@example.net,Sales,Manager,Renee Hudson,Full-Time,2025-07-06,,ACTIVE
+U0412,Oscar Parker,alyssaallen@example.com,HR,SWE,Kimberly Gibson,Full-Time,2025-07-24,2025-08-10,INACTIVE
+U0413,Valerie Thomas,christopher38@example.com,HR,SWE,Matthew Hoover,Intern,2025-07-12,,ACTIVE
+U0414,Jacqueline Villegas,carpenterwilliam@example.net,Marketing,Manager,Alejandra Santos,Full-Time,2025-08-30,,ACTIVE
+U0415,Angela Bradley,ibates@example.org,Sales,Manager,Sandra Juarez,Intern,2025-11-30,,ACTIVE
+U0416,Samuel Howe,vhaynes@example.com,IT,VP,Richard Adams,Contractor,2025-09-01,,ACTIVE
+U0417,Dillon Jones,derekcarrillo@example.org,Finance,Manager,Riley Bryant,Contractor,2025-11-07,2026-04-07,INACTIVE
+U0418,Christopher Owens,wmartinez@example.org,Operations,Staff SWE,Manuel King,Intern,2026-01-24,,ACTIVE
+U0419,John Phelps,mooregina@example.net,Engineering,VP,Haley Davis,Intern,2026-01-01,,ACTIVE
+U0420,Amanda Huff,eddie35@example.com,Sales,Analyst,Luis Bullock,Full-Time,2025-11-20,,ACTIVE
+U0421,Megan Green,anthonysullivan@example.com,IT,Designer,Kimberly Gibson,Full-Time,2025-11-20,,ACTIVE
+U0422,Krista Davis,laradonald@example.org,Marketing,Designer,Connor West,Intern,2026-01-17,,ACTIVE
+U0423,Richard Walker,madisonwatson@example.net,Finance,Staff SWE,Ralph Lee,Full-Time,2025-10-28,,ACTIVE
+U0424,Angela Willis,johnsoncaleb@example.net,Operations,Senior SWE,Allison Lopez,Contractor,2025-08-06,,ACTIVE
+U0425,Carl Stein,david70@example.org,IT,Manager,Timothy Duncan,Contractor,2025-12-30,,ACTIVE
+U0426,Jessica Ramsey,rjohnson@example.com,Finance,SWE,Kevin Mills,Full-Time,2026-04-16,,ACTIVE
+U0427,Daniel Lopez,sean20@example.net,Finance,Manager,Melinda Evans,Full-Time,2025-12-07,,ACTIVE
+U0428,Danielle Phillips,eandrade@example.org,Engineering,Manager,Adrian Ferguson,Intern,2025-08-19,,ACTIVE
+U0429,James Barnes,crystalpham@example.org,IT,Designer,Reginald Williams,Intern,2026-04-25,,ACTIVE
+U0430,Rachael Howard DDS,kcooper@example.net,HR,Manager,Melissa Brown,Contractor,2025-11-11,,ACTIVE
+U0431,Devin Johnson,anthonycochran@example.com,Finance,VP,Richard Young,Contractor,2025-12-21,,ACTIVE
+U0432,William Moreno,terrigarcia@example.net,HR,Designer,Sharon Cochran,Intern,2026-02-15,,ACTIVE
+U0433,Joseph Moody,gallagherstacie@example.net,Sales,Manager,Julie Spencer,Contractor,2026-01-17,2026-03-14,INACTIVE
+U0434,Rebecca Kelly,gregorywatkins@example.net,Operations,Staff SWE,Daniel Adams,Contractor,2026-03-30,,ACTIVE
+U0435,Suzanne Johnson,stacey92@example.net,Finance,Analyst,Teresa Ramirez,Full-Time,2025-09-28,,ACTIVE
+U0436,Sara Cochran,lweaver@example.com,HR,Manager,Gina Mcmillan,Intern,2026-05-21,,ACTIVE
+U0437,Anthony Guzman,foxaaron@example.net,Sales,Director,Katrina Adkins,Contractor,2026-05-14,,ACTIVE
+U0438,Carlos Love,brian29@example.net,HR,Staff SWE,Jason Hayes,Contractor,2025-09-14,2026-05-22,INACTIVE
+U0439,Patricia Mathis,susan56@example.net,Marketing,SWE,Jennifer Reed,Full-Time,2025-07-28,,ACTIVE
+U0440,Eric Taylor,jessicakim@example.net,Operations,SWE,Jonathan Wheeler,Full-Time,2026-01-17,2026-03-17,INACTIVE
+U0441,Marie Thompson,jeffrey92@example.com,Engineering,Staff SWE,Gabrielle Davis,Full-Time,2026-03-05,,ACTIVE
+U0442,Michael Anderson,rushstacy@example.com,Engineering,Designer,Derrick Adams,Contractor,2025-06-28,2026-04-06,INACTIVE
+U0443,Patricia Bradley,carriemccall@example.net,HR,SWE,Daniel Adams,Intern,2025-11-07,,ACTIVE
+U0444,Keith Zuniga,markmiller@example.com,Sales,SWE,Brenda Velazquez,Intern,2026-05-31,,ACTIVE
+U0445,Mrs. Stacey Davis,sean43@example.org,Marketing,Senior SWE,Rita Keith,Intern,2025-09-04,,ACTIVE
+U0446,Hayley Buchanan,williamssamuel@example.com,Finance,Director,Christopher Owens,Contractor,2025-11-03,,ACTIVE
+U0447,Stacey Snyder,ybell@example.org,Engineering,VP,Zachary Brooks,Contractor,2026-04-05,,ACTIVE
+U0448,Rachel Lane,franciscojones@example.org,Operations,Manager,Samantha Davis,Intern,2025-07-31,,ACTIVE
+U0449,Fernando Lynn,petersonpamela@example.org,IT,SWE,Rebecca Valencia,Contractor,2025-12-31,,ACTIVE
+U0450,Kimberly Villanueva,morgantricia@example.com,HR,SWE,Amanda Mcfarland,Full-Time,2026-06-14,,ACTIVE
+U0451,Jessica Valdez,gmoore@example.com,HR,Analyst,Jennifer Ayala,Contractor,2026-04-05,,ACTIVE
+U0452,Colton Terry,donna43@example.org,Engineering,SWE,Michael Martinez,Full-Time,2026-06-09,,ACTIVE
+U0453,Kenneth Larsen,briansmith@example.org,HR,Director,Jessica Holmes,Full-Time,2026-06-05,,ACTIVE
+U0454,Matthew Greene,collinclark@example.net,Finance,SWE,Jason Peters,Contractor,2025-06-28,,ACTIVE
+U0455,Bradley Anthony,kristen77@example.net,Finance,Staff SWE,Edwin Reyes,Intern,2026-01-09,,ACTIVE
+U0456,Martin Hughes,nicole52@example.com,Sales,Staff SWE,Daniel Aguilar,Full-Time,2026-04-06,,ACTIVE
+U0457,Jeremiah Baker,anne21@example.org,HR,VP,James Conner,Intern,2025-08-30,,ACTIVE
+U0458,Rhonda Gutierrez,angelarandall@example.net,Operations,Senior SWE,Andrew Reeves,Intern,2025-12-14,2026-04-04,INACTIVE
+U0459,Joseph Camacho,parmstrong@example.com,Marketing,Senior SWE,Sophia Moore,Intern,2026-04-30,,ACTIVE
+U0460,James Nash,shawrachel@example.net,HR,VP,Tricia Valencia,Intern,2025-11-06,,ACTIVE
+U0461,Lisa Martinez,kthompson@example.org,HR,Designer,Peter Garrett,Contractor,2026-03-30,,ACTIVE
+U0462,Beth Henderson,oharris@example.org,HR,Staff SWE,Matthew Williams,Intern,2026-05-24,,ACTIVE
+U0463,Deanna Bartlett,millerangela@example.net,IT,Director,Eddie Mueller,Full-Time,2025-07-27,2025-10-13,INACTIVE
+U0464,Donald Ellis,buchanancindy@example.net,HR,Staff SWE,Frank Campbell MD,Contractor,2025-11-29,,ACTIVE
+U0465,Ashley Hernandez,buckleyanna@example.org,Engineering,SWE,Richard Young,Contractor,2025-12-21,,ACTIVE
+U0466,Sharon Beard,pbaker@example.com,Engineering,Staff SWE,Sandra Williams,Full-Time,2026-01-26,,ACTIVE
+U0467,Kara Jackson,mthomas@example.net,Finance,Analyst,Matthew Ross,Full-Time,2025-08-04,,ACTIVE
+U0468,Amanda Preston,hannah07@example.com,Engineering,VP,Patricia Bradley,Contractor,2025-06-26,,ACTIVE
+U0469,Alicia Roth,larry71@example.org,HR,Senior SWE,Renee Hudson,Intern,2025-10-22,,ACTIVE
+U0470,William Ramos,joseph69@example.net,Marketing,Analyst,Madison Poole,Full-Time,2025-11-04,,ACTIVE
+U0471,Jeremy Mcintyre,wfigueroa@example.net,HR,Staff SWE,Carmen Smith,Full-Time,2026-01-28,,ACTIVE
+U0472,Samantha Robertson,cameronmckinney@example.com,Sales,Designer,Patricia Johnson,Full-Time,2025-12-21,,ACTIVE
+U0473,Samuel Suarez,thompsonnancy@example.org,Marketing,Designer,Kristina Faulkner,Intern,2025-09-28,,ACTIVE
+U0474,Danielle Bryant,janet45@example.com,Marketing,Director,Abigail Shaffer,Contractor,2025-12-07,,ACTIVE
+U0475,Madison Martinez,allentracy@example.com,HR,VP,Heather Bolton,Contractor,2026-01-26,,ACTIVE
+U0476,Seth Matthews,max41@example.com,IT,Staff SWE,Samantha Davis,Contractor,2026-04-24,,ACTIVE
+U0477,Anthony Nash,mercedesholland@example.net,Marketing,Designer,Judith Maynard,Full-Time,2026-01-09,,ACTIVE
+U0478,Matthew Palmer,wellsdavid@example.org,Sales,Designer,Jenna Anderson DVM,Full-Time,2025-12-03,,ACTIVE
+U0479,Alejandra King,jennifer46@example.com,IT,Analyst,Justin Riley,Full-Time,2026-04-04,,ACTIVE
+U0480,Judy Robinson,erica96@example.net,Finance,Staff SWE,Brett Walker,Intern,2025-07-03,,ACTIVE
+U0481,Jorge Bates,anna99@example.com,HR,Manager,Mitchell Jackson,Contractor,2026-06-09,2026-06-15,INACTIVE
+U0482,Brian Brown,danielle44@example.net,Operations,Designer,John Brown,Intern,2025-11-22,,ACTIVE
+U0483,Stephanie Evans,zacharyallen@example.org,Operations,Staff SWE,Joshua Jackson,Contractor,2025-12-30,2026-06-01,INACTIVE
+U0484,Rebekah Greene,erin07@example.com,HR,Analyst,Matthew Velez,Intern,2026-06-09,,ACTIVE
+U0485,Jason Price,aguilarwanda@example.org,Engineering,VP,Harold Ellis,Intern,2026-04-20,,ACTIVE
+U0486,Micheal Parks,qknox@example.com,Engineering,Senior SWE,Austin Baker,Full-Time,2026-05-22,,ACTIVE
+U0487,Sarah Pittman,kellyruiz@example.net,Marketing,SWE,Daniel Aguilar,Intern,2026-06-01,,ACTIVE
+U0488,Robert Hines,staceylam@example.net,IT,VP,John Campbell,Contractor,2025-08-13,2025-12-23,INACTIVE
+U0489,Henry Garner,robert55@example.com,Marketing,Manager,Amanda Hernandez,Contractor,2026-01-06,,ACTIVE
+U0490,Julie Wilson,delacruzbrandy@example.net,Operations,Staff SWE,Michael Watkins,Full-Time,2026-02-22,2026-04-16,INACTIVE
+U0491,Steve Mason,amoreno@example.org,Engineering,Senior SWE,Jessica Ramsey,Intern,2025-08-31,,ACTIVE
+U0492,Brittany Gay,robert97@example.org,Sales,Designer,Laura Jones,Full-Time,2026-03-13,,ACTIVE
+U0493,Mike Maxwell,lcook@example.com,HR,Senior SWE,Mitchell Jackson,Intern,2026-06-11,,ACTIVE
+U0494,Abigail Hill,barbaramoore@example.org,Engineering,Director,Lisa Brandt,Intern,2025-08-17,2026-02-08,INACTIVE
+U0495,Jeffrey Jordan,ysanford@example.org,Operations,Senior SWE,Karen Morales DDS,Full-Time,2025-10-22,,ACTIVE
+U0496,Curtis Watson,mcclainkatherine@example.net,Finance,Staff SWE,John Boone,Intern,2026-01-24,,ACTIVE
+U0497,Michael Sims,jeremywiley@example.com,Marketing,Analyst,Shannon Malone,Full-Time,2025-09-23,,ACTIVE
+U0498,James Chapman,cameronwilliams@example.com,HR,Analyst,Rebecca Henderson,Intern,2026-04-30,,ACTIVE
+U0499,Joseph Warren,ibarron@example.com,HR,Analyst,Kimberly Rodgers,Full-Time,2026-06-15,,ACTIVE
+U0500,Katherine Christensen MD,osmith@example.net,Sales,Senior SWE,Kimberly Patel,Full-Time,2026-03-21,,ACTIVE
