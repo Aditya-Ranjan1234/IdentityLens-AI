@@ -29,16 +29,16 @@ export default function GraphPage() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
     fetch(`${apiUrl}/api/graph`)
       .then((res) => res.json())
-      .then((data) => {
+      .then((data: GraphData) => {
         setGraphData(data);
-        const parsedNodes: Node[] = data.nodes.map((n, index) => ({
+        const parsedNodes: Node[] = data.nodes.map((n, index: number) => ({
           id: n.id,
           type: "default",
           position: { x: Math.random() * 800, y: Math.random() * 600 },
           data: { label: n.label },
           style: getNodeStyle(n.type, n.platform),
         }));
-        const parsedEdges: Edge[] = data.edges.map((e, index) => ({
+        const parsedEdges: Edge[] = data.edges.map((e, index: number) => ({
           id: `e-${index}`,
           source: e.source,
           target: e.target,
