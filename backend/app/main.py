@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, HTMLResponse
 import os
 from app.api import users, risks, incidents, graph, master, privileges, anomalies, explanations, metrics, offboarding, reports
 
@@ -27,35 +27,94 @@ app.include_router(metrics.router, prefix="/api/metrics", tags=["metrics"])
 app.include_router(offboarding.router, prefix="/api/offboarding", tags=["offboarding gaps"])
 app.include_router(reports.router, prefix="/api/reports", tags=["reports"])
 
-# Frontend static files (check both possible relative paths for single-space and local dev)
+# Frontend static files — safely resolve paths (handle None when path not found)
 def get_frontend_path(suffix):
     paths = [
         os.path.join(os.path.dirname(__file__), "../../frontend", suffix),
         os.path.join(os.path.dirname(__file__), "../../../frontend", suffix),
+        os.path.join("/app/frontend", suffix),
     ]
     for path in paths:
-        if os.path.exists(path):
-            return path
+        norm = os.path.normpath(path)
+        if os.path.exists(norm):
+            return norm
     return None
 
-frontend_dist = get_frontend_path(".next/standalone")
+frontend_standalone = get_frontend_path(".next/standalone")
 frontend_public = get_frontend_path("public")
 frontend_static = get_frontend_path(".next/static")
 
-if os.path.exists(frontend_dist):
-    if os.path.exists(frontend_static):
+_frontend_available = frontend_standalone is not None
+
+if _frontend_available:
+    # Mount Next.js static assets
+    if frontend_static and os.path.exists(frontend_static):
         app.mount("/_next/static", StaticFiles(directory=frontend_static), name="next-static")
-    if os.path.exists(frontend_public):
+    if frontend_public and os.path.exists(frontend_public):
         app.mount("/public", StaticFiles(directory=frontend_public), name="public")
-    
-    @app.get("/{full_path:path}")
+
+    @app.get("/{full_path:path}", include_in_schema=False)
     async def serve_frontend(full_path: str):
-        html_path = os.path.join(frontend_dist, "server", "index.html")
-        if os.path.exists(html_path):
-            return FileResponse(html_path)
-        return {"message": "IdentityLens AI API"}
+        # Don't intercept /api routes (they are registered before this catch-all)
+        # Try to serve the Next.js standalone index
+        html_path = os.path.join(frontend_standalone, "server", "app", "index.html")
+        # Fallback paths for different Next.js versions
+        fallback_paths = [
+            os.path.join(frontend_standalone, "server", "app", "index.html"),
+            os.path.join(frontend_standalone, "server", "pages", "index.html"),
+            os.path.join(frontend_standalone, "index.html"),
+        ]
+        for p in fallback_paths:
+            if os.path.exists(p):
+                return FileResponse(p)
+        # Last resort: return a minimal redirect page
+        return HTMLResponse(
+            content="<html><head><meta http-equiv='refresh' content='0;url=/'></head><body>Loading...</body></html>",
+            status_code=200
+        )
+
+else:
+    # No frontend built — serve a status page so HF Spaces health check passes
+    @app.get("/", include_in_schema=False)
+    async def root():
+        return HTMLResponse(
+            content="""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IdentityLens AI</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0;
+           display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    .card { background: #1e293b; border-radius: 12px; padding: 48px; text-align: center; max-width: 480px; }
+    h1 { color: #38bdf8; margin: 0 0 12px; font-size: 2rem; }
+    p  { color: #94a3b8; margin: 0 0 24px; }
+    a  { display: inline-block; background: #0ea5e9; color: #fff; text-decoration: none;
+         border-radius: 8px; padding: 12px 28px; font-weight: 600; }
+    a:hover { background: #38bdf8; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🔐 IdentityLens AI</h1>
+    <p>Identity Sprawl Detection &amp; Risk Intelligence Platform</p>
+    <a href="/docs">View API Docs →</a>
+  </div>
+</body>
+</html>""",
+            status_code=200
+        )
+
+@app.get("/health", include_in_schema=False)
+def health():
+    return {"status": "ok", "service": "IdentityLens AI"}
 
 @app.get("/test")
 def test():
-    import os
-    return {"file": __file__, "cwd": os.getcwd()}
+    return {
+        "file": __file__,
+        "cwd": os.getcwd(),
+        "frontend_standalone": frontend_standalone,
+        "frontend_available": _frontend_available
+    }
