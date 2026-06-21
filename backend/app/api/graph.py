@@ -23,9 +23,9 @@ def get_graph(limit: int = Query(60, description="Max users to show in graph (de
         }
     except Exception:
         # Fallback: take first `limit` user nodes
-        top_user_ids = {
+        top_user_ids = list({
             n["id"] for n in full_graph["nodes"] if n["type"] == "user"
-        }[:limit]
+        })[:limit]
 
     # Keep only nodes connected to those users
     allowed_ids: set = set(top_user_ids)
