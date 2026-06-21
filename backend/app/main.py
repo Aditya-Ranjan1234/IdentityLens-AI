@@ -8,7 +8,7 @@ from app.api import users, risks, incidents, graph, master, privileges, anomalie
 
 logger = logging.getLogger("identitylens")
 
-app = FastAPI(title="IdentityLens AI", version="1.0.0", redirect_slashes=False)
+app = FastAPI(title="IdentityLens AI", version="1.0.0")
 
 @app.on_event("startup")
 async def startup_event():
