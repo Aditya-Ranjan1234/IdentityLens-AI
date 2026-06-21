@@ -46,7 +46,10 @@ def extract_features():
         try:
             if len(user_logs) > 0:
                 user_logs = user_logs.copy()
-                user_logs['hour'] = pd.to_datetime(user_logs['timestamp'], errors='coerce').dt.hour
+                # Use ISO8601 format explicitly — avoids slow dateutil fallback warning
+                user_logs['hour'] = pd.to_datetime(
+                    user_logs['timestamp'], format='ISO8601', errors='coerce'
+                ).dt.hour
                 valid_hours = user_logs['hour'].dropna()
                 if len(valid_hours) > 1:
                     hour_variance = float(valid_hours.var())
