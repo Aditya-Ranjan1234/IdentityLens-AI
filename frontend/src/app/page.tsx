@@ -121,25 +121,45 @@ export default function Home() {
 
   useEffect(() => {
     const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
-    Promise.all([
-      fetch(`${API_URL}/api/users`).then((res) => res.json()),
-      fetch(`${API_URL}/api/risks`).then((res) => res.json()),
-      fetch(`${API_URL}/api/incidents`).then((res) => res.json()),
-      fetch(`${API_URL}/api/anomalies`).then((res) => res.json()),
-      fetch(`${API_URL}/api/metrics`).then((res) => res.json()),
-      fetch(`${API_URL}/api/graph`).then((res) => res.json()),
-      fetch(`${API_URL}/api/offboarding`).then((res) => res.json()),
+
+    const fetchWithTimeout = (url: string, ms = 15000) => {
+      const ctrl = new AbortController();
+      const id = setTimeout(() => ctrl.abort(), ms);
+      return fetch(url, { signal: ctrl.signal })
+        .then((res) => { clearTimeout(id); return res.json(); })
+        .catch(() => { clearTimeout(id); return null; });
+    };
+
+    Promise.allSettled([
+      fetchWithTimeout(`${API_URL}/api/users`),
+      fetchWithTimeout(`${API_URL}/api/risks`),
+      fetchWithTimeout(`${API_URL}/api/incidents`),
+      fetchWithTimeout(`${API_URL}/api/anomalies`),
+      fetchWithTimeout(`${API_URL}/api/metrics`),
+      fetchWithTimeout(`${API_URL}/api/graph`),
+      fetchWithTimeout(`${API_URL}/api/offboarding`),
     ])
       .then(([usersRes, risksRes, incidentsRes, anomaliesRes, metricsRes, graphRes, offboardingRes]) => {
-        setUsers(usersRes);
-        setRisks(risksRes);
-        setIncidents(incidentsRes);
-        setAnomalies(anomaliesRes);
-        setMetrics(metricsRes);
-        setGraphData(graphRes);
-        setOffboardingGaps(offboardingRes);
+        const val = (r: PromiseSettledResult<any>, fallback: any) =>
+          r.status === "fulfilled" && r.value ? r.value : fallback;
 
-        const initialNodes: Node[] = (graphRes?.nodes || []).map((node: any) => {
+        const usersData   = val(usersRes,       []);
+        const risksData   = val(risksRes,        []);
+        const incData     = val(incidentsRes,    []);
+        const anomData    = val(anomaliesRes,    []);
+        const metricsData = val(metricsRes,      null);
+        const graphData   = val(graphRes,        { nodes: [], edges: [] });
+        const offData     = val(offboardingRes,  []);
+
+        setUsers(usersData);
+        setRisks(risksData);
+        setIncidents(incData);
+        setAnomalies(anomData);
+        setMetrics(metricsData);
+        setGraphData(graphData);
+        setOffboardingGaps(offData);
+
+        const initialNodes: Node[] = (graphData?.nodes || []).map((node: any) => {
           let color = "#98cbff";
           let borderColor = "#98cbff";
           let bg = "#161d23";
@@ -181,7 +201,7 @@ export default function Home() {
           };
         });
         
-        const initialEdges: Edge[] = (graphRes?.edges || []).map((edge: any, index: number) => ({
+        const initialEdges: Edge[] = (graphData?.edges || []).map((edge: any, index: number) => ({
           id: `edge-${index}`,
           source: edge.source,
           target: edge.target,
