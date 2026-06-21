@@ -29,9 +29,6 @@ WORKDIR /app
 COPY --chown=user backend/ ./backend/
 
 # Copy Next.js standalone bundle and assets
-# The standalone folder contains a self-contained Node server,
-# but we serve it via FastAPI's StaticFiles — we only need the
-# pre-rendered HTML/static output.
 COPY --chown=user --from=frontend-builder /app/frontend/.next/standalone ./frontend/.next/standalone
 COPY --chown=user --from=frontend-builder /app/frontend/.next/static     ./frontend/.next/static
 COPY --chown=user --from=frontend-builder /app/frontend/public            ./frontend/public
@@ -42,6 +39,11 @@ COPY --chown=user --from=frontend-builder /app/frontend/.next/static \
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r backend/requirements.txt
+
+# ── Pre-train ML models at build time so the pickle protocol matches ──
+# This avoids the KeyError:118 crash when loading models saved by a
+# different Python version.  Models are written to backend/models/ .
+RUN cd /app/backend && python -c "from app.ml.anomaly_detector import train_all_models; train_all_models(); print('Models trained OK')"
 
 # Hugging Face Spaces requires port 7860
 EXPOSE 7860

@@ -3,9 +3,23 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, HTMLResponse
 import os
+import logging
 from app.api import users, risks, incidents, graph, master, privileges, anomalies, explanations, metrics, offboarding, reports
 
+logger = logging.getLogger("identitylens")
+
 app = FastAPI(title="IdentityLens AI", version="1.0.0")
+
+@app.on_event("startup")
+async def startup_event():
+    """Pre-train ML models on startup so the first API request never blocks."""
+    try:
+        from app.ml.anomaly_detector import _ensure_models
+        logger.info("Pre-training / verifying ML models...")
+        _ensure_models()
+        logger.info("ML models ready.")
+    except Exception as exc:
+        logger.error(f"Startup model training failed (will retry on first request): {exc}")
 
 app.add_middleware(
     CORSMiddleware,
@@ -107,6 +121,7 @@ else:
         )
 
 @app.get("/health", include_in_schema=False)
+@app.get("/healthz", include_in_schema=False)
 def health():
     return {"status": "ok", "service": "IdentityLens AI"}
 
