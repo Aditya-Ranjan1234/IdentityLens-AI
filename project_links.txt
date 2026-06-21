@@ -1,0 +1,13 @@
+IdentityLens AI
+================
+
+IdentityLens AI is an advanced, next-generation identity security platform designed to detect identity sprawl, analyze effective privileges, locate offboarding gaps (orphan accounts), and map blast radiuses across fragmented enterprise environments (AWS, Okta, Active Directory, Salesforce). 
+
+It features:
+- A FastAPI backend running a custom Multi-Factor Risk Engine and unsupervised ML Anomaly Detection (Isolation Forest).
+- A responsive Next.js frontend rendering an interactive Identity Graph using ReactFlow + Dagre layout, metrics using Recharts, and automated offboarding gap checklists.
+
+Project Resources:
+------------------
+GitHub Repository: https://github.com/Aditya-Ranjan1234/IdentityLens-AI
+YouTube Demo Video: https://youtu.be/nkBqShsmStM
