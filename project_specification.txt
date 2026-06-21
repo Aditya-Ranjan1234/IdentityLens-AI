@@ -1,0 +1,140 @@
+================================================================================
+                    IDENTITYLENS AI - PRODUCT SPECIFICATION
+================================================================================
+An Enterprise-Grade Identity Threat Detection & Response (ITDR) Platform
+Document Version: 1.0.0 | System Revision: Production Stable
+
+--------------------------------------------------------------------------------
+1. EXECUTIVE SUMMARY & VALUE PROPOSITION
+--------------------------------------------------------------------------------
+Modern enterprise security perimeters are no longer defined by firewalls, but by
+identities. With employees accessing workloads across AWS, Okta, Active Directory
+(AD), and Salesforce, security teams struggle with "Identity Sprawl"—the fragmented
+proliferation of human and machine credentials. 
+
+IdentityLens AI is an Enterprise-Grade Identity Threat Detection and Response 
+(ITDR) platform that consolidates, resolves, analyzes, and visualizes identity 
+relationships. By unifying cross-platform account links under singular human 
+profiles, the system calculates granular risk metrics, detects anomalous sign-ins 
+using unsupervised Machine Learning, and flags critical compliance gaps (such as 
+orphaned accounts belonging to terminated employees).
+
+--------------------------------------------------------------------------------
+2. ARCHITECTURE & SYSTEM DATA FLOWS
+--------------------------------------------------------------------------------
+IdentityLens AI is architected as a decoupled, high-throughput analytics system:
+
+                           [ DATA INGESTION LAYER ]
+             (CSV Snapshots: HR Records, AD, AWS, Okta, Salesforce)
+                                     │
+                                     ▼
+                      [ CORE ANALYTICS ENGINE LAYER ]
+     ┌───────────────────────┬───────────────┬──────────────────────┐
+     │                       │               │                      │
+     ▼                       ▼               ▼                      ▼
+┌───────────┐         ┌─────────────┐ ┌─────────────┐        ┌─────────────┐
+│ Identity  │         │  Privilege  │ │  ML Anomaly │        │   Incident  │
+│ Resolver  │         │  Calculator │ │  Detector   │        │  Correlator │
+└─────┬─────┘         └──────┬──────┘ └──────┬──────┘        └──────┬──────┘
+      │                      │               │                      │
+      └──────────────────────┼───────────────┘                      │
+                             ▼                                      ▼
+                      ┌─────────────┐                        ┌─────────────┐
+                      │ Risk Engine │                        │  Chronology  │
+                      └──────┬──────┘                        └──────┬──────┘
+                             │                                      │
+                             ▼                                      ▼
+                        [ API CONTROLLER LAYER (FastAPI) ]
+           (Served on Port 8000 / Dynamic Caching / Sub-graph Slicing)
+                                     │
+                                     ▼
+                     [ REVERSE PROXY LAYER (Next.js) ]
+                (Port 3000 Rewrite Proxy / Timeout Handler)
+                                     │
+                                     ▼
+                      [ REACT APPLICATION LAYOUT ]
+         (ReactFlow DAG Engine / Recharts Analytics / Tabbed UI)
+
+--------------------------------------------------------------------------------
+3. DETAILED COMPONENT & ALGORITHM SPECIFICATIONS
+--------------------------------------------------------------------------------
+
+A. IDENTITY RESOLUTION ENGINE (Multi-Platform Mapping)
+   - Function: Unifies fragmented identities across disparate systems. An employee 
+     might be "j.doe@company.com" in HR, "jdoe" in Active Directory, and 
+     "arn:aws:iam::123:user/john.doe" in AWS.
+   - Logic: Builds an inverted matching index utilizing deterministic properties 
+     (e.g., matching emails, parsed system usernames, employee IDs). It builds a 
+     unified master node for each physical human, linking child platform accounts.
+   - Graph Scaling Solution: Large graphs stall client browsers. The Graph API 
+     resolves this by ranking master identities using the Risk Engine output, 
+     then extracting the top 60 highest-risk sub-graphs. This ensures instantaneous 
+     client-side rendering via ReactFlow while highlighting the most critical 
+     attack paths.
+
+B. MULTI-FACTOR RISK ENGINE (Weighted Scoring Model)
+   - Mathematical Model: Evaluates identity risk scores (bound between 0 and 100) 
+     using a weighted heuristic penalty system:
+     
+     Risk Score = w1 * (Missing_MFA) 
+                + w2 * (Excessive_Privileges) 
+                + w3 * (Account_Dormancy) 
+                + w4 * (Cross_Platform_Sprawl)
+                
+     Where:
+     - Missing_MFA: Binary penalty applied if key platforms access lacks multi-factor enforcement.
+     - Excessive_Privileges: Evaluated using relative privilege scoring (Admin/Root access assignments).
+     - Account_Dormancy: Days since last authentication (greater than 90 days triggers degradation penalties).
+     - Sprawl Factor: The quantity of active platforms mapped to a single identity.
+   - Scoring Thresholds: Categorized into LOW (<30), MEDIUM (30-60), HIGH (60-80), 
+     and CRITICAL (>=80) to drive immediate triage.
+
+C. ML ANOMALY DETECTOR (Isolation Forest Model)
+   - Algorithm: Unsupervised Isolation Forest (Scikit-learn) for threat modeling.
+   - Mechanism:
+     1. Ingests raw audit logs containing properties such as user agent, location, 
+        event codes, and timestamp frequencies.
+     2. Encodes datetime timestamps into cyclical sine/cosine wave representations 
+        to capture temporal behaviors (e.g., standard working hours vs. midnight runs).
+     3. Isolates anomalous access points by calculating the shortest path lengths 
+        in randomized decision trees.
+     4. Stores models inside a serialized directory utilizing `joblib` caches. 
+        Models automatically retrain at Docker build-time or backend boot.
+
+D. INCIDENT CORRELATOR (Sliding-Window Clustering)
+   - Logic: Reduces security analyst alert fatigue by correlating low-level events.
+   - Mechanism: Scans audit logs for shared user identities. It runs a sliding 
+     time-window partition (15-minute intervals). If multiple suspicious flags 
+     (e.g., rapid travel + credential modification) occur within the same window 
+     for a single identity, they are aggregated into a single high-priority 
+     incident timeline.
+
+E. OFFBOARDING GAP CHECKER (HR vs. Directory Reconciliation)
+   - Logic: Cross-checks active directory directory states against ex-employee termination date entries.
+   - Mechanism: Computes date diffs: Gap = Current_Date - Termination_Date. If 
+     an account linked to a terminated employee remains active where Gap > 0 days, 
+     it is immediately flagged with high severity, providing an active offboarding checklist.
+
+--------------------------------------------------------------------------------
+4. WHAT MAKES IDENTITYLENS AI UNIQUE & SUPERIOR
+--------------------------------------------------------------------------------
+1. Non-Intrusive Direct Ingestion:
+   Unlike expensive agents that degrade system performance, IdentityLens AI is 
+   built on event-driven state snapshots. It ingests standard directories and audit 
+   logs, allowing immediate out-of-the-box integration.
+   
+2. Unified Identity Mapping:
+   Traditional platforms monitor AWS, Okta, or AD in isolation. IdentityLens AI 
+   merges these silos, tracking compromise paths across your entire IT landscape 
+   simultaneously.
+   
+3. Proactive Blast Radius Visualization:
+   Through its customized ReactFlow graph interface, security teams don't just see 
+   a text list of vulnerabilities—they visually trace the exact assets an attacker 
+   could pivot to if a specific employee's credentials were leaked.
+
+4. Resilient Backend Engineering:
+   Features auto-healing models (re-trains automatically if joblib pickle protocol 
+   mismatches occur), zero-block startup mechanisms, and API performance 
+   optimizations like 15-second client-side fetch timeouts.
+================================================================================
