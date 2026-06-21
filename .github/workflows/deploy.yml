@@ -1,8 +1,10 @@
 
 name: Deploy to Hugging Face Space
+
 on:
   push:
     branches: [ main, master ]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -11,10 +13,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Configure Git
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
+
+      - name: Install git-lfs
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y git-lfs
+          git lfs install
+
       - name: Prepare deployment snapshot
         run: |
           mkdir hf-space
@@ -23,21 +33,50 @@ jobs:
             --exclude '.github/' \
             --exclude 'hf-space/' \
             --exclude 'venv/' \
-            --exclude 'backend/models/' \
+            --exclude 'backend/models/*.pkl' \
             --exclude 'frontend/node_modules/' \
             --exclude 'frontend/.next/' \
             --exclude 'template/' \
             --exclude '*.png' \
             ./ hf-space/
+          # Ensure models dir exists (Dockerfile trains at build time)
           mkdir -p hf-space/backend/models
-      - name: Push snapshot to Hugging Face
+
+      - name: Init HF repo and configure LFS
         run: |
           cd hf-space
           git init
+          git lfs install
+          # Track large files via LFS to avoid 429 from HF size limits
+          git lfs track "*.pkl"
+          git lfs track "frontend/package-lock.json"
+          git lfs track "backend/data/*.csv"
+          git add .gitattributes
+
+      - name: Commit snapshot
+        run: |
+          cd hf-space
           git checkout -B main
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
           git add --all
-          git commit -m "Auto-deploy from GitHub"
-          git remote add origin https://aditya-ranjan1234:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/aditya-ranjan1234/identitylens-ai
-          git push origin main --force
+          git commit -m "Auto-deploy from GitHub @ ${{ github.sha }}"
+
+      - name: Push to Hugging Face (with retry)
+        run: |
+          cd hf-space
+          git remote add hf https://aditya-ranjan1234:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/aditya-ranjan1234/identitylens-ai
+
+          # Retry up to 5 times with exponential back-off (handles 429)
+          for attempt in 1 2 3 4 5; do
+            echo "Push attempt $attempt..."
+            if git push hf main --force; then
+              echo "Push succeeded on attempt $attempt"
+              exit 0
+            fi
+            WAIT=$((attempt * 30))
+            echo "Push failed (attempt $attempt). Waiting ${WAIT}s before retry..."
+            sleep $WAIT
+          done
+          echo "All push attempts failed."
+          exit 1
